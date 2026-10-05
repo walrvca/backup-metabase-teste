@@ -1,0 +1,176 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Total amount of discounts last quarter compared to the previous",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "unit": "quarter",
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        13,
+        {
+          "base-type": "type/DateTime",
+          "temporal-unit": "quarter"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Created At: Quarter",
+      "base_type": "type/DateTime"
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Sum of Discount",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "sum",
+      "semantic_type": "type/Discount",
+      "settings": null
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Discounts given per quarter",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "sum",
+            {
+              "lib/uuid": "f1215c96-2705-4997-a8d1-aa9d8e45a3dd"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "6d823ad0-e9bb-4198-99b4-996554d187f6",
+                "effective-type": "type/Float"
+              },
+              3
+            ]
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "quarter",
+              "lib/uuid": "932aea65-967c-4f38-9d3e-a31d1556b0b0",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "include-current": false,
+              "lib/uuid": "a7dea97c-f6f7-4134-8474-34974915b7ea"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "8158a708-4d9a-4361-9fcc-87f70832c62d",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            -2,
+            "quarter"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 34,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"sum\",[\"field\",3,{\"base-type\":\"type/Float\"}]]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-2,\"quarter\",{\"include-current\":false}],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "smartscalar",
+  "archived_directly": false,
+  "entity_id": "IEp2LZKY_aJMpchBacdjP",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {},
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

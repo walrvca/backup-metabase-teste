@@ -1,0 +1,323 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Monthly revenue broken down by products",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "unit": "month",
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        13,
+        {
+          "base-type": "type/DateTime",
+          "temporal-unit": "month",
+          "original-temporal-unit": "quarter"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Created At: Month",
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "CATEGORY",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        18,
+        {
+          "base-type": "type/Text",
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 18,
+      "visibility_type": "normal",
+      "display_name": "Product → Category",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Sum of Total",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "sum",
+      "semantic_type": "type/Currency",
+      "settings": {
+        "currency": "USD"
+      }
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Average of Total",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        1
+      ],
+      "name": "avg",
+      "semantic_type": "type/Currency",
+      "settings": {
+        "currency": "USD"
+      }
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Max of Total",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        2
+      ],
+      "name": "max",
+      "semantic_type": "type/Currency",
+      "settings": {
+        "currency": "USD"
+      }
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Sum of Discount",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        3
+      ],
+      "name": "sum_2",
+      "semantic_type": "type/Discount",
+      "settings": null
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Revenue by product category",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "metric",
+            {
+              "lib/uuid": "ed065511-d6ed-498c-91b2-26fc3ddede9e"
+            },
+            9
+          ],
+          [
+            "avg",
+            {
+              "lib/uuid": "fc7a1ede-5901-43e3-bbe6-55412ebd6e42"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "dabf8a28-c291-496b-96ff-2cce2b43fffa",
+                "effective-type": "type/Float"
+              },
+              5
+            ]
+          ],
+          [
+            "max",
+            {
+              "lib/uuid": "d2916602-65a6-4206-906c-f585bab5dc31"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "e330ff58-2c77-4af6-a85d-7caeff12e7de",
+                "effective-type": "type/Float"
+              },
+              5
+            ]
+          ],
+          [
+            "sum",
+            {
+              "lib/uuid": "2c8779cd-83ca-4ec2-925c-5b9c3e9ac9c0"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "d036fb42-637a-480c-b287-c5c8b815d636",
+                "effective-type": "type/Float"
+              },
+              3
+            ]
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "temporal-unit": "month",
+              "base-type": "type/DateTime",
+              "original-temporal-unit": "quarter",
+              "lib/uuid": "3b0dfafb-315a-450a-9faf-e1cd906cd120",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "b793dcd3-2797-4456-a43a-2ec42bfddbfa",
+              "effective-type": "type/Text"
+            },
+            18
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "lib/uuid": "a3425731-be42-4124-8a97-de8711c4a332"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "a6f1f9b8-5538-420b-8eca-c34957bed463",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            -4,
+            "month"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 13,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9],[\"avg\",[\"field\",5,{\"base-type\":\"type/Float\"}]],[\"max\",[\"field\",5,{\"base-type\":\"type/Float\"}]],[\"sum\",[\"field\",3,{\"base-type\":\"type/Float\"}]]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"month\",\"original-temporal-unit\":\"quarter\"}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-4,\"month\"],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "bar",
+  "archived_directly": false,
+  "entity_id": "-6yAP_G1UZ7xZc4E65Tvy",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.y_axis.title_text": "",
+    "graph.show_values": true,
+    "graph.x_axis.title_text": "",
+    "graph.metrics": [
+      "sum",
+      "avg",
+      "max",
+      "sum_2"
+    ],
+    "graph.tooltip_columns": [
+      "[\"name\",\"sum_2\"]",
+      "[\"name\",\"avg\"]",
+      "[\"name\",\"max\"]"
+    ],
+    "graph.show_stack_values": "all",
+    "graph.label_value_formatting": "compact",
+    "series_settings": {
+      "Doohickey": {
+        "color": "#7172AD"
+      },
+      "Gadget": {
+        "color": "#A989C5"
+      },
+      "Gizmo": {
+        "color": "#C7EAEA"
+      },
+      "Widget": {
+        "color": "#227FD2"
+      }
+    },
+    "graph.dimensions": [
+      "CREATED_AT",
+      "CATEGORY"
+    ],
+    "stackable.stack_type": "stacked"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

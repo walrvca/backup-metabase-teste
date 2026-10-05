@@ -1,0 +1,145 @@
+{
+  "cache_invalidated_at": null,
+  "description": null,
+  "archived": false,
+  "view_count": 8,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 1,
+  "result_metadata": [
+    {
+      "database_type": "INTEGER",
+      "semantic_type": "type/Quantity",
+      "lib/deduplicated-name": "count",
+      "lib/original-name": "count",
+      "name": "count",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "count",
+      "source": "aggregation",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/Integer",
+      "lib/desired-column-alias": "count",
+      "display_name": "Contagem",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 1,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "skewness": null,
+            "min": 2500.0,
+            "q1": 2500.0,
+            "q3": 2500.0,
+            "excess-kurtosis": null,
+            "zero-fraction": 0.0,
+            "mode-fraction": 1.0,
+            "top-3-fraction": 1.0,
+            "max": 2500.0,
+            "sd": 0.0,
+            "avg": 2500.0
+          }
+        }
+      },
+      "base_type": "type/Integer"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 2,
+    "first_name": "mcp",
+    "last_name": "",
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "common_name": "mcp"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 5,
+  "query_type": "query",
+  "name": "Total de pessoas",
+  "last_query_start": "2026-09-24T20:13:17.636525Z",
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-09-24T20:13:17.678209Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": 39.25,
+  "creator_id": 2,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T15:02:21.491971Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "source-table": 1,
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "2068d795-6188-4951-8a6f-d43c47e4c976"
+            }
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 40,
+  "legacy_query": "{\"type\":\"query\",\"query\":{\"source-table\":1,\"aggregation\":[[\"count\"]]},\"database\":1}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "scalar",
+  "archived_directly": false,
+  "entity_id": "FSdXhbzyQBXr7dUTupfC8",
+  "param_fields": {},
+  "collection_preview": true,
+  "last-edit-info": {
+    "id": 2,
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "first_name": "mcp",
+    "last_name": "",
+    "timestamp": "2025-10-03T15:02:21.501046Z"
+  },
+  "visualization_settings": {},
+  "collection": {
+    "authority_level": null,
+    "description": null,
+    "archived": false,
+    "slug": "sample1",
+    "archive_operation_id": null,
+    "name": "SAMPLE1",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": false,
+    "id": 5,
+    "archived_directly": null,
+    "entity_id": "QIy7orCg6TivB07a0X2iy",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T14:58:20.780932Z"
+  },
+  "metabase_version": "v0.56.8 (da08112)",
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T15:02:21.491971Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

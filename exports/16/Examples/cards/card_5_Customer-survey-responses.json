@@ -1,0 +1,337 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Feedback on our products via weekly survey",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 5,
+  "result_metadata": [
+    {
+      "description": null,
+      "semantic_type": "type/PK",
+      "coercion_strategy": null,
+      "name": "ID",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        20,
+        null
+      ],
+      "effective_type": "type/BigInteger",
+      "id": 20,
+      "visibility_type": "normal",
+      "display_name": "ID",
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/FK",
+      "coercion_strategy": null,
+      "name": "ACCOUNT_ID",
+      "settings": null,
+      "fk_target_field_id": 24,
+      "field_ref": [
+        "field",
+        25,
+        null
+      ],
+      "effective_type": "type/BigInteger",
+      "id": 25,
+      "visibility_type": "normal",
+      "display_name": "Account ID",
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Email",
+      "coercion_strategy": null,
+      "name": "EMAIL",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        26,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 26,
+      "visibility_type": "normal",
+      "display_name": "Email",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": null,
+      "coercion_strategy": null,
+      "name": "DATE_RECEIVED",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        27,
+        null
+      ],
+      "effective_type": "type/DateTime",
+      "id": 27,
+      "visibility_type": "normal",
+      "display_name": "Date Received",
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Score",
+      "coercion_strategy": null,
+      "name": "RATING",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        22,
+        null
+      ],
+      "effective_type": "type/Integer",
+      "id": 22,
+      "visibility_type": "normal",
+      "display_name": "Rating",
+      "base_type": "type/Integer"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "RATING_MAPPED",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        23,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 23,
+      "visibility_type": "normal",
+      "display_name": "Rating Mapped",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": null,
+      "coercion_strategy": null,
+      "name": "BODY",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        28,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 28,
+      "visibility_type": "normal",
+      "display_name": "Body",
+      "base_type": "type/Text"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Customer survey responses",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "order-by": [
+          [
+            "desc",
+            {
+              "lib/uuid": "0f85b162-6185-4e8e-a700-111c2298d75e"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "4b362283-7b2d-4e2f-a6b9-a399e310800e",
+                "effective-type": "type/DateTime"
+              },
+              27
+            ]
+          ]
+        ],
+        "source-table": 5,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "lib/uuid": "25c8d4da-11f5-4631-b43d-05186d2c181f"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "e4c12b9a-1e45-4a3a-8e91-4e7d395408de",
+                "effective-type": "type/DateTime"
+              },
+              27
+            ],
+            -12,
+            "month"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 5,
+  "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"time-interval\",[\"field\",27,{\"base-type\":\"type/DateTime\"}],-12,\"month\"],\"order-by\":[[\"desc\",[\"field\",27,{\"base-type\":\"type/DateTime\"}]]],\"source-table\":5},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "table",
+  "archived_directly": false,
+  "entity_id": "Jxa0svP68DfXubV_wD3os",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "table.cell_column": "BODY",
+    "table.column_formatting": [
+      {
+        "color": "#F7C4C4",
+        "columns": [
+          "RATING"
+        ],
+        "highlight_row": true,
+        "id": 2,
+        "operator": "<",
+        "type": "single",
+        "value": 3
+      },
+      {
+        "color": "#FBE499",
+        "columns": [
+          "RATING"
+        ],
+        "highlight_row": true,
+        "id": 1,
+        "operator": "=",
+        "type": "single",
+        "value": 3
+      },
+      {
+        "max_value": 100,
+        "color": "#A7D07C",
+        "columns": [
+          "RATING"
+        ],
+        "value": 3,
+        "type": "single",
+        "colors": [
+          "#ED6E6E",
+          "#FFFFFF",
+          "#84BB4C"
+        ],
+        "highlight_row": true,
+        "min_value": 0,
+        "min_type": null,
+        "id": 0,
+        "operator": ">",
+        "max_type": null
+      }
+    ],
+    "table.columns": [
+      {
+        "enabled": true,
+        "name": "ID"
+      },
+      {
+        "enabled": true,
+        "name": "DATE_RECEIVED"
+      },
+      {
+        "enabled": false,
+        "name": "ACCOUNT_ID"
+      },
+      {
+        "enabled": true,
+        "name": "EMAIL"
+      },
+      {
+        "enabled": true,
+        "name": "RATING"
+      },
+      {
+        "enabled": false,
+        "name": "RATING_MAPPED"
+      },
+      {
+        "enabled": true,
+        "name": "BODY"
+      }
+    ],
+    "table.pivot_column": "RATING",
+    "column_settings": {
+      "[\"name\",\"DATE_RECEIVED\"]": {
+        "date_abbreviate": true,
+        "date_style": "dddd, MMMM D, YYYY",
+        "time_enabled": null
+      }
+    }
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

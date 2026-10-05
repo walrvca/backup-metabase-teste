@@ -1,0 +1,246 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Sankey flow from visiting our website to taking an action",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 7,
+  "result_metadata": [
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "BUTTON_LABEL",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        29,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 29,
+      "visibility_type": "normal",
+      "display_name": "Button Label",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "EVENT",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        32,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 32,
+      "visibility_type": "normal",
+      "display_name": "Event",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "field",
+        "count",
+        {
+          "base-type": "type/Integer"
+        }
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    },
+    {
+      "base_type": "type/Text",
+      "display_name": "Step",
+      "effective_type": "type/Text",
+      "field_ref": [
+        "expression",
+        "Step"
+      ],
+      "name": "Step",
+      "semantic_type": null
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "User flow diagram",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "20d0c291-b595-4204-9395-7f2a93059725",
+              "effective-type": "type/Text"
+            },
+            29
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "4b64748a-4fd1-4d32-952d-bbae712f893d",
+              "effective-type": "type/Text"
+            },
+            32
+          ]
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "569b0c6f-f7c9-4dc8-93cd-c4e50f50b187"
+            }
+          ]
+        ],
+        "source-table": 7
+      },
+      {
+        "lib/type": "mbql.stage/mbql",
+        "expressions": [
+          [
+            "case",
+            {
+              "lib/uuid": "07ecfafb-0ea7-47b4-92fa-123900569c95",
+              "lib/expression-name": "Step"
+            },
+            [
+              [
+                [
+                  "is-null",
+                  {
+                    "lib/uuid": "680e8698-a0a1-49df-a475-dd9a2b7a6f61"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Text",
+                      "lib/uuid": "5f5b1b72-03a9-4f02-b711-f9d365a0675e"
+                    },
+                    "BUTTON_LABEL"
+                  ]
+                ],
+                "Bounced"
+              ]
+            ],
+            [
+              "field",
+              {
+                "base-type": "type/Text",
+                "lib/uuid": "30280ae0-4ac8-4542-a6c6-3942f0251484"
+              },
+              "BUTTON_LABEL"
+            ]
+          ]
+        ],
+        "filters": [
+          [
+            "!=",
+            {
+              "lib/uuid": "dfecda29-42ca-48e0-ace9-61677400044e"
+            },
+            [
+              "expression",
+              {
+                "base-type": "type/Text",
+                "lib/uuid": "00656387-f9d3-4475-b875-ad9f020eceae"
+              },
+              "Step"
+            ],
+            "Bounced"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 11,
+  "legacy_query": "{\"database\":1,\"query\":{\"expressions\":{\"Step\":[\"case\",[[[\"is-null\",[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}]],\"Bounced\"]],{\"default\":[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}]}]},\"filter\":[\"!=\",[\"expression\",\"Step\",{\"base-type\":\"type/Text\"}],\"Bounced\"],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",29,{\"base-type\":\"type/Text\"}],[\"field\",32,{\"base-type\":\"type/Text\"}]],\"source-table\":7}},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "sankey",
+  "archived_directly": false,
+  "entity_id": "9VE9Z6tAkyzO3GeQVXtin",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "sankey.edge_color": "source",
+    "sankey.node_align": "right",
+    "sankey.show_edge_labels": true,
+    "sankey.source": "EVENT",
+    "sankey.target": "Step"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

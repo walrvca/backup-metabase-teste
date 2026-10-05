@@ -1,0 +1,133 @@
+{
+  "cache_invalidated_at": null,
+  "description": null,
+  "archived": false,
+  "view_count": 4,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "semantic_type": "type/Name",
+      "lib/deduplicated-name": "sum",
+      "lib/original-name": "sum",
+      "name": "sum",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "sum",
+      "source": "aggregation",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/Text",
+      "lib/desired-column-alias": "sum",
+      "display_name": "Soma de Last Name",
+      "base_type": "type/Text"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 2,
+    "first_name": "mcp",
+    "last_name": "",
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "common_name": "mcp"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 5,
+  "query_type": "query",
+  "name": "Total de vendas",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T15:01:36.659136Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 2,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T15:01:36.659136Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "source-table": 2,
+        "aggregation": [
+          [
+            "sum",
+            {
+              "lib/uuid": "3abee0c9-3fea-402a-b06f-59258a5b66dd"
+            },
+            [
+              "field",
+              {
+                "lib/uuid": "02d070fb-f450-4370-9467-88a91fbd2fe7",
+                "lib/transformation-added-base-type": true,
+                "base-type": "type/Text",
+                "effective-type": "type/Text"
+              },
+              36
+            ]
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 39,
+  "legacy_query": "{\"database\":1,\"query\":{\"source-table\":2,\"aggregation\":[[\"sum\",[\"field\",36,null]]]},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "scalar",
+  "archived_directly": false,
+  "entity_id": "P2er-7We_2ywkvOD1-dgH",
+  "param_fields": {},
+  "collection_preview": true,
+  "last-edit-info": {
+    "id": 2,
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "first_name": "mcp",
+    "last_name": "",
+    "timestamp": "2025-10-03T15:01:36.674091Z"
+  },
+  "visualization_settings": {},
+  "collection": {
+    "authority_level": null,
+    "description": null,
+    "archived": false,
+    "slug": "sample1",
+    "archive_operation_id": null,
+    "name": "SAMPLE1",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": false,
+    "id": 5,
+    "archived_directly": null,
+    "entity_id": "QIy7orCg6TivB07a0X2iy",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T14:58:20.780932Z"
+  },
+  "metabase_version": "v0.56.8 (da08112)",
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T15:01:36.659136Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

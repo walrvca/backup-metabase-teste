@@ -1,0 +1,227 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Shows a distribution of orders broken down by source across our customers' age groups",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": 1,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "base_type": "type/Decimal",
+      "description": "Age of the customer in years.",
+      "display_name": "Age",
+      "effective_type": "type/Decimal",
+      "field_ref": [
+        "field",
+        "Age",
+        {
+          "base-type": "type/BigInteger",
+          "binning": {
+            "strategy": "num-bins",
+            "num-bins": 10,
+            "min-value": 20,
+            "max-value": 70,
+            "bin-width": 5
+          }
+        }
+      ],
+      "name": "Age",
+      "semantic_type": "type/Quantity"
+    },
+    {
+      "description": "The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter",
+      "semantic_type": "type/Source",
+      "coercion_strategy": null,
+      "name": "SOURCE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        30,
+        {
+          "base-type": "type/Text",
+          "source-field": 11
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 30,
+      "visibility_type": "normal",
+      "display_name": "User → Source",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Orders by source per age group",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "joins": [
+          {
+            "alias": "Products",
+            "strategy": "left-join",
+            "conditions": [
+              [
+                "=",
+                {
+                  "lib/uuid": "79928d71-9f2f-4eed-91d0-7f5523ac5c7f"
+                },
+                [
+                  "field",
+                  {
+                    "base-type": "type/Integer",
+                    "lib/uuid": "881046e9-b831-4d0e-a478-893cea090c25"
+                  },
+                  "PRODUCT_ID"
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/BigInteger",
+                    "join-alias": "Products",
+                    "lib/uuid": "39295592-86c4-43af-87fb-fbdd98014f0b",
+                    "effective-type": "type/BigInteger"
+                  },
+                  8
+                ]
+              ]
+            ],
+            "lib/type": "mbql/join",
+            "stages": [
+              {
+                "lib/type": "mbql.stage/mbql",
+                "source-table": 3
+              }
+            ]
+          }
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "989f3324-d132-47b7-b6d6-fd91a1eba396"
+            }
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/BigInteger",
+              "binning": {
+                "strategy": "num-bins",
+                "num-bins": 10
+              },
+              "lib/uuid": "abe76da4-69fa-453b-9cb3-d136517b5a90"
+            },
+            "Age"
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 11,
+              "lib/uuid": "45f21138-5f22-413c-89bf-d068d0bc4502",
+              "effective-type": "type/Text"
+            },
+            30
+          ]
+        ],
+        "source-card": 1
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 36,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",\"Age\",{\"base-type\":\"type/BigInteger\",\"binning\":{\"strategy\":\"num-bins\",\"num-bins\":10}}],[\"field\",30,{\"base-type\":\"type/Text\",\"source-field\":11}]],\"joins\":[{\"alias\":\"Products\",\"condition\":[\"=\",[\"field\",\"PRODUCT_ID\",{\"base-type\":\"type/Integer\"}],[\"field\",8,{\"base-type\":\"type/BigInteger\",\"join-alias\":\"Products\"}]],\"source-table\":3,\"strategy\":\"left-join\"}],\"source-table\":\"card__1\"},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "bar",
+  "archived_directly": false,
+  "entity_id": "yBoV-iHmFUrY9xqB0v9Pg",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.dimensions": [
+      "Age",
+      "SOURCE"
+    ],
+    "graph.show_values": true,
+    "graph.x_axis.scale": "linear",
+    "stackable.stack_type": "stacked",
+    "graph.metrics": [
+      "count"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

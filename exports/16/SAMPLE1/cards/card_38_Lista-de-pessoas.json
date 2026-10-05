@@ -1,0 +1,662 @@
+{
+  "cache_invalidated_at": null,
+  "description": null,
+  "archived": false,
+  "view_count": 8,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 1,
+  "result_metadata": [
+    {
+      "description": "A unique identifier given to each user.",
+      "database_type": "BIGINT",
+      "semantic_type": "type/PK",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "ID",
+      "lib/original-name": "ID",
+      "name": "ID",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "ID",
+      "lib/original-display-name": "ID",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        4,
+        null
+      ],
+      "effective_type": "type/BigInteger",
+      "active": true,
+      "id": 4,
+      "lib/desired-column-alias": "ID",
+      "position": 0,
+      "visibility_type": "normal",
+      "display_name": "ID",
+      "fingerprint": null,
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": "The street address of the account’s billing address",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": null,
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "ADDRESS",
+      "lib/original-name": "ADDRESS",
+      "name": "ADDRESS",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "ADDRESS",
+      "lib/original-display-name": "Address",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        51,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 51,
+      "lib/desired-column-alias": "ADDRESS",
+      "position": 1,
+      "visibility_type": "normal",
+      "display_name": "Address",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2490,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "percent-blank": 0.0,
+            "average-length": 20.85,
+            "mode-fraction": 0.0004,
+            "top-3-fraction": 0.0012
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The contact email for the account.",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Email",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "EMAIL",
+      "lib/original-name": "EMAIL",
+      "name": "EMAIL",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "EMAIL",
+      "lib/original-display-name": "Email",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        7,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 7,
+      "lib/desired-column-alias": "EMAIL",
+      "position": 2,
+      "visibility_type": "normal",
+      "display_name": "Email",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2500,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 1.0,
+            "percent-state": 0.0,
+            "percent-blank": 0.0,
+            "average-length": 24.1824,
+            "mode-fraction": 0.0004,
+            "top-3-fraction": 0.0012
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "This is the salted password of the user. It should not be visible",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": null,
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "PASSWORD",
+      "lib/original-name": "PASSWORD",
+      "name": "PASSWORD",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "PASSWORD",
+      "lib/original-display-name": "Password",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        54,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 54,
+      "lib/desired-column-alias": "PASSWORD",
+      "position": 3,
+      "visibility_type": "normal",
+      "display_name": "Password",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2500,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "percent-blank": 0.0,
+            "average-length": 36.0,
+            "mode-fraction": 0.0004,
+            "top-3-fraction": 0.0012
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The name of the user who owns an account",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Name",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "NAME",
+      "lib/original-name": "NAME",
+      "name": "NAME",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "NAME",
+      "lib/original-display-name": "Name",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        48,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 48,
+      "lib/desired-column-alias": "NAME",
+      "position": 4,
+      "visibility_type": "normal",
+      "display_name": "Name",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2499,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "percent-blank": 0.0,
+            "average-length": 13.532,
+            "mode-fraction": 0.0004,
+            "top-3-fraction": 0.0012
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The city of the account’s billing address",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/City",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "CITY",
+      "lib/original-name": "CITY",
+      "name": "CITY",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "CITY",
+      "lib/original-display-name": "City",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        53,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 53,
+      "lib/desired-column-alias": "CITY",
+      "position": 5,
+      "visibility_type": "normal",
+      "display_name": "City",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 1966,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.002,
+            "percent-blank": 0.0,
+            "average-length": 8.284,
+            "mode-fraction": 0.0024,
+            "top-3-fraction": 0.0056
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "This is the longitude of the user on sign-up. It might be updated in the future to the last seen location.",
+      "database_type": "DOUBLE PRECISION",
+      "semantic_type": "type/Longitude",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "LONGITUDE",
+      "lib/original-name": "LONGITUDE",
+      "name": "LONGITUDE",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "LONGITUDE",
+      "lib/original-display-name": "Longitude",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        58,
+        null
+      ],
+      "effective_type": "type/Float",
+      "active": true,
+      "id": 58,
+      "lib/desired-column-alias": "LONGITUDE",
+      "position": 6,
+      "visibility_type": "normal",
+      "display_name": "Longitude",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2491,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "skewness": -1.425523889025143,
+            "min": -166.5425726,
+            "q1": -101.3931105,
+            "q3": -84.5251529,
+            "excess-kurtosis": 3.1927485127652977,
+            "zero-fraction": 0.0,
+            "mode-fraction": 0.0004,
+            "top-3-fraction": 0.0012,
+            "max": -67.96735199999999,
+            "sd": 15.4034020641059,
+            "avg": -95.18741780363989
+          }
+        }
+      },
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The state or province of the account’s billing address",
+      "database_type": "CHARACTER",
+      "semantic_type": "type/State",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "STATE",
+      "lib/original-name": "STATE",
+      "name": "STATE",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "STATE",
+      "lib/original-display-name": "State",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        1,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 1,
+      "lib/desired-column-alias": "STATE",
+      "position": 7,
+      "visibility_type": "normal",
+      "display_name": "State",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 49,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 1.0,
+            "percent-blank": 0.0,
+            "average-length": 2.0,
+            "mode-fraction": 0.0776,
+            "top-3-fraction": 0.1624
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Source",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "SOURCE",
+      "lib/original-name": "SOURCE",
+      "name": "SOURCE",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "SOURCE",
+      "lib/original-display-name": "Source",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        30,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 30,
+      "lib/desired-column-alias": "SOURCE",
+      "position": 8,
+      "visibility_type": "normal",
+      "display_name": "Source",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 5,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "percent-blank": 0.0,
+            "average-length": 7.4084,
+            "mode-fraction": 0.2048,
+            "top-3-fraction": 0.6084
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The date of birth of the user",
+      "database_type": "DATE",
+      "semantic_type": null,
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "BIRTH_DATE",
+      "lib/original-name": "BIRTH_DATE",
+      "name": "BIRTH_DATE",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "BIRTH_DATE",
+      "lib/original-display-name": "Birth Date",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        12,
+        null
+      ],
+      "effective_type": "type/Date",
+      "active": true,
+      "id": 12,
+      "lib/desired-column-alias": "BIRTH_DATE",
+      "position": 9,
+      "visibility_type": "normal",
+      "display_name": "Birth Date",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2308,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/DateTime": {
+            "earliest": "1958-04-26",
+            "latest": "2000-04-03"
+          }
+        }
+      },
+      "base_type": "type/Date"
+    },
+    {
+      "description": "The postal code of the account’s billing address",
+      "database_type": "CHARACTER",
+      "semantic_type": "type/ZipCode",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "ZIP",
+      "lib/original-name": "ZIP",
+      "name": "ZIP",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "ZIP",
+      "lib/original-display-name": "Zip",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        61,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 61,
+      "lib/desired-column-alias": "ZIP",
+      "position": 10,
+      "visibility_type": "normal",
+      "display_name": "Zip",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2235,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "percent-blank": 0.0,
+            "average-length": 5.0,
+            "mode-fraction": 0.0012,
+            "top-3-fraction": 0.0036
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "This is the latitude of the user on sign-up. It might be updated in the future to the last seen location.",
+      "database_type": "DOUBLE PRECISION",
+      "semantic_type": "type/Latitude",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "LATITUDE",
+      "lib/original-name": "LATITUDE",
+      "name": "LATITUDE",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "LATITUDE",
+      "lib/original-display-name": "Latitude",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        52,
+        null
+      ],
+      "effective_type": "type/Float",
+      "active": true,
+      "id": 52,
+      "lib/desired-column-alias": "LATITUDE",
+      "position": 11,
+      "visibility_type": "normal",
+      "display_name": "Latitude",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2490,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "skewness": 0.9276221363439162,
+            "min": 25.775827,
+            "q1": 35.2979402,
+            "q3": 43.72863599999999,
+            "excess-kurtosis": 2.5697139200347703,
+            "zero-fraction": 0.0,
+            "mode-fraction": 0.0004,
+            "top-3-fraction": 0.0012,
+            "max": 70.6355001,
+            "sd": 6.392706954078982,
+            "avg": 39.87934670484004
+          }
+        }
+      },
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The date the user record was created. Also referred to as the user’s \"join date\"",
+      "database_type": "TIMESTAMP",
+      "semantic_type": "type/CreationTimestamp",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "CREATED_AT",
+      "lib/original-name": "CREATED_AT",
+      "name": "CREATED_AT",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "CREATED_AT",
+      "lib/original-display-name": "Created At",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        50,
+        null
+      ],
+      "effective_type": "type/DateTime",
+      "active": true,
+      "id": 50,
+      "lib/desired-column-alias": "CREATED_AT",
+      "position": 12,
+      "visibility_type": "normal",
+      "display_name": "Created At",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2500,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/DateTime": {
+            "earliest": "2025-04-19T21:35:18.752Z",
+            "latest": "2028-04-19T14:06:27.3Z",
+            "mode-fraction": 0.0004,
+            "top-3-fraction": 0.0012
+          }
+        }
+      },
+      "base_type": "type/DateTime"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 2,
+    "first_name": "mcp",
+    "last_name": "",
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "common_name": "mcp"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 5,
+  "query_type": "query",
+  "name": "Lista de pessoas",
+  "last_query_start": "2026-09-24T20:13:17.635871Z",
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-09-24T20:13:17.678209Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": 94.875,
+  "creator_id": 2,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T15:01:17.928414Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "source-table": 1
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 38,
+  "legacy_query": "{\"database\":1,\"type\":\"query\",\"query\":{\"source-table\":1}}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "table",
+  "archived_directly": false,
+  "entity_id": "CEJhBFLIkpfP4pIL6thOf",
+  "param_fields": {},
+  "collection_preview": true,
+  "last-edit-info": {
+    "id": 2,
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "first_name": "mcp",
+    "last_name": "",
+    "timestamp": "2025-10-03T15:01:17.948464Z"
+  },
+  "visualization_settings": {},
+  "collection": {
+    "authority_level": null,
+    "description": null,
+    "archived": false,
+    "slug": "sample1",
+    "archive_operation_id": null,
+    "name": "SAMPLE1",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": false,
+    "id": 5,
+    "archived_directly": null,
+    "entity_id": "QIy7orCg6TivB07a0X2iy",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T14:58:20.780932Z"
+  },
+  "metabase_version": "v0.56.8 (da08112)",
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T15:01:17.928414Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

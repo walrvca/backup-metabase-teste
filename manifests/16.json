@@ -1,0 +1,11 @@
+{
+  "operationId": 16,
+  "toolkit": "metabase-migration-toolkit",
+  "source": "http://metabase1:3000",
+  "scope": {
+    "dashboards": true,
+    "collections": true
+  },
+  "checksum": "n/a",
+  "versionedAt": "2026-10-05T03:50:20.807Z"
+}

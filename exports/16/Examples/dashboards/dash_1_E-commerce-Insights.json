@@ -1,0 +1,5851 @@
+{
+  "description": "Overview of sample data and hypothetical sales",
+  "archived": false,
+  "view_count": 10,
+  "collection_position": 2,
+  "dashcards": [
+    {
+      "size_x": 7,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Compares total revenue this quarter to our goal",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "sum",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Revenue goal for this quarter",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "aggregation": [
+                [
+                  "metric",
+                  {
+                    "lib/uuid": "ec1adff9-d8f6-4f1f-ac94-07fd854ae7a4"
+                  },
+                  9
+                ]
+              ],
+              "source-table": 2,
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "lib/uuid": "3485d2aa-5ea8-4c2f-a1bd-b91ad58c667e"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "e24716ee-7bc2-407d-906a-83158bb30ac9",
+                      "effective-type": "type/DateTime"
+                    },
+                    13
+                  ],
+                  "current",
+                  "quarter"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 17,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],\"current\",\"quarter\"],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "progress",
+        "archived_directly": false,
+        "entity_id": "Ey2qt4I-wcg1E0846iUQS",
+        "collection_preview": true,
+        "visualization_settings": {
+          "progress.goal": 250000,
+          "column_settings": {
+            "[\"name\",\"sum\"]": {
+              "decimals": 0
+            }
+          }
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 17,
+      "id": 9,
+      "parameter_mappings": [
+        {
+          "card_id": 17,
+          "parameter_id": "1ebab259",
+          "target": [
+            "dimension",
+            [
+              "field",
+              34,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 17,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 17,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 17,
+      "entity_id": "vPyErYUpYMjucZa7z4smS",
+      "visualization_settings": {},
+      "size_y": 4,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 6
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Revenue in the US broken down by state",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": 1,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The state or province of the account’s billing address.",
+            "semantic_type": "type/State",
+            "name": "STATE",
+            "field_ref": [
+              "field",
+              "STATE",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 1,
+            "visibility_type": "normal",
+            "display_name": "State",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "sum",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Revenue by state",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "44cd42ac-6cdb-4f6a-8383-995aa196f974"
+                  },
+                  "STATE"
+                ]
+              ],
+              "aggregation": [
+                [
+                  "sum",
+                  {
+                    "lib/uuid": "e7f3ce42-c9f6-41e8-a23c-f9e07d32d502"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "9b11ad0e-3ae0-42fb-81d1-993d1c496e59"
+                    },
+                    "TOTAL"
+                  ]
+                ]
+              ],
+              "source-card": 1
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 2,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"sum\",[\"field\",\"TOTAL\",{\"base-type\":\"type/Float\"}]]],\"breakout\":[[\"field\",\"STATE\",{\"base-type\":\"type/Text\"}]],\"source-table\":\"card__1\"},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "map",
+        "archived_directly": false,
+        "entity_id": "jjO5LcBp8qNILJFiYZoVt",
+        "collection_preview": true,
+        "visualization_settings": {
+          "map.colors": [
+            "rgb(229, 229, 241)",
+            "rgb(192, 192, 218)",
+            "rgb(155, 155, 194)",
+            "rgb(118, 119, 171)",
+            "hsl(239, 29.5%, 39.3%)"
+          ],
+          "map.region": "us_states",
+          "map.type": "region"
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 12,
+      "id": 4,
+      "parameter_mappings": [
+        {
+          "card_id": 2,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 2,
+      "entity_id": "gi60ETDzDM8MxIUN9Nt-7",
+      "visualization_settings": {},
+      "size_y": 8,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 10
+    },
+    {
+      "size_x": 14,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Shows the distribution of the product categories along the scale of customer ratings",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The average rating users have given the product. This ranges from 1 - 5",
+            "semantic_type": "type/Score",
+            "coercion_strategy": null,
+            "name": "RATING",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              16,
+              {
+                "base-type": "type/Float",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Float",
+            "id": 16,
+            "visibility_type": "normal",
+            "display_name": "Product → Rating",
+            "base_type": "type/Float"
+          },
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Customer satisfaction per category",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "order-by": [
+                [
+                  "desc",
+                  {
+                    "lib/uuid": "2b939cb8-b3f1-4278-81db-66fb79cd1d47"
+                  },
+                  [
+                    "field",
+                    {
+                      "source-field": 14,
+                      "base-type": "type/Float",
+                      "binning": {
+                        "strategy": "default"
+                      },
+                      "lib/uuid": "288a7852-dcae-41ee-a73d-88fd17efe5e4",
+                      "effective-type": "type/Float"
+                    },
+                    16
+                  ]
+                ]
+              ],
+              "aggregation": [
+                [
+                  "count",
+                  {
+                    "lib/uuid": "6079a115-de5a-4f3a-b8e1-e35ff984f2a8"
+                  }
+                ]
+              ],
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Float",
+                    "source-field": 14,
+                    "lib/uuid": "04a8fb2d-9408-4fb9-91ab-c3f733fa7a4e",
+                    "effective-type": "type/Float"
+                  },
+                  16
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "8805ec43-80b8-4359-b1bc-20bb8919b8af",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "source-table": 2,
+              "filters": [
+                [
+                  "!=",
+                  {
+                    "lib/uuid": "03ed902d-0066-4895-80d9-bf7cc26673f5"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Text",
+                      "source-field": 14,
+                      "lib/uuid": "09772c9c-d15a-4951-8d1f-1e75f5121b9f",
+                      "effective-type": "type/Text"
+                    },
+                    17
+                  ],
+                  "Incredible Aluminum Knife"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 3,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",16,{\"base-type\":\"type/Float\",\"source-field\":14}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"filter\":[\"!=\",[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],\"Incredible Aluminum Knife\"],\"order-by\":[[\"desc\",[\"field\",16,{\"base-type\":\"type/Float\",\"source-field\":14,\"binning\":{\"strategy\":\"default\"}}]]],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "bar",
+        "archived_directly": false,
+        "entity_id": "OJ-I03ZsQ7IBrzr29B_8o",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.y_axis.title_text": "",
+          "graph.show_values": true,
+          "graph.x_axis.title_text": "",
+          "graph.metrics": [
+            "count"
+          ],
+          "graph.label_value_formatting": "compact",
+          "series_settings": {
+            "Doohickey": {
+              "color": "#7172AD"
+            },
+            "Gadget": {
+              "color": "#999AC4"
+            },
+            "Gizmo": {
+              "color": "#227FD2"
+            },
+            "Widget": {
+              "color": "#C7EAEA"
+            }
+          },
+          "graph.x_axis.scale": "histogram",
+          "graph.dimensions": [
+            "RATING",
+            "CATEGORY"
+          ],
+          "stackable.stack_type": "stacked"
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 10,
+      "id": 22,
+      "parameter_mappings": [
+        {
+          "card_id": 3,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 3,
+      "entity_id": "WNCZfFyxCnhkAttN_rsIy",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 26
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Feedback on our products via weekly survey",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 5,
+        "result_metadata": [
+          {
+            "description": null,
+            "semantic_type": "type/PK",
+            "coercion_strategy": null,
+            "name": "ID",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              20,
+              null
+            ],
+            "effective_type": "type/BigInteger",
+            "id": 20,
+            "visibility_type": "normal",
+            "display_name": "ID",
+            "base_type": "type/BigInteger"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/FK",
+            "coercion_strategy": null,
+            "name": "ACCOUNT_ID",
+            "settings": null,
+            "fk_target_field_id": 24,
+            "field_ref": [
+              "field",
+              25,
+              null
+            ],
+            "effective_type": "type/BigInteger",
+            "id": 25,
+            "visibility_type": "normal",
+            "display_name": "Account ID",
+            "base_type": "type/BigInteger"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Email",
+            "coercion_strategy": null,
+            "name": "EMAIL",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              26,
+              null
+            ],
+            "effective_type": "type/Text",
+            "id": 26,
+            "visibility_type": "normal",
+            "display_name": "Email",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": null,
+            "coercion_strategy": null,
+            "name": "DATE_RECEIVED",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              27,
+              null
+            ],
+            "effective_type": "type/DateTime",
+            "id": 27,
+            "visibility_type": "normal",
+            "display_name": "Date Received",
+            "base_type": "type/DateTime"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Score",
+            "coercion_strategy": null,
+            "name": "RATING",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              22,
+              null
+            ],
+            "effective_type": "type/Integer",
+            "id": 22,
+            "visibility_type": "normal",
+            "display_name": "Rating",
+            "base_type": "type/Integer"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "RATING_MAPPED",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              23,
+              null
+            ],
+            "effective_type": "type/Text",
+            "id": 23,
+            "visibility_type": "normal",
+            "display_name": "Rating Mapped",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": null,
+            "coercion_strategy": null,
+            "name": "BODY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              28,
+              null
+            ],
+            "effective_type": "type/Text",
+            "id": 28,
+            "visibility_type": "normal",
+            "display_name": "Body",
+            "base_type": "type/Text"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Customer survey responses",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "order-by": [
+                [
+                  "desc",
+                  {
+                    "lib/uuid": "642112f6-e61f-4de1-aa6a-a2b79870259d"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "03ef4b40-40d2-473c-a098-0879183a3bb4",
+                      "effective-type": "type/DateTime"
+                    },
+                    27
+                  ]
+                ]
+              ],
+              "source-table": 5,
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "lib/uuid": "91640dd5-60d9-4f29-897e-3de0828aba89"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "bc8cc5b2-cd33-4231-a019-c444e224860a",
+                      "effective-type": "type/DateTime"
+                    },
+                    27
+                  ],
+                  -12,
+                  "month"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 5,
+        "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"time-interval\",[\"field\",27,{\"base-type\":\"type/DateTime\"}],-12,\"month\"],\"order-by\":[[\"desc\",[\"field\",27,{\"base-type\":\"type/DateTime\"}]]],\"source-table\":5},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "table",
+        "archived_directly": false,
+        "entity_id": "Jxa0svP68DfXubV_wD3os",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.cell_column": "BODY",
+          "table.column_formatting": [
+            {
+              "color": "#F7C4C4",
+              "columns": [
+                "RATING"
+              ],
+              "highlight_row": true,
+              "id": 2,
+              "operator": "<",
+              "type": "single",
+              "value": 3
+            },
+            {
+              "color": "#FBE499",
+              "columns": [
+                "RATING"
+              ],
+              "highlight_row": true,
+              "id": 1,
+              "operator": "=",
+              "type": "single",
+              "value": 3
+            },
+            {
+              "max_value": 100,
+              "color": "#A7D07C",
+              "columns": [
+                "RATING"
+              ],
+              "value": 3,
+              "type": "single",
+              "colors": [
+                "#ED6E6E",
+                "#FFFFFF",
+                "#84BB4C"
+              ],
+              "highlight_row": true,
+              "min_value": 0,
+              "min_type": null,
+              "id": 0,
+              "operator": ">",
+              "max_type": null
+            }
+          ],
+          "table.columns": [
+            {
+              "enabled": true,
+              "name": "ID"
+            },
+            {
+              "enabled": true,
+              "name": "DATE_RECEIVED"
+            },
+            {
+              "enabled": false,
+              "name": "ACCOUNT_ID"
+            },
+            {
+              "enabled": true,
+              "name": "EMAIL"
+            },
+            {
+              "enabled": true,
+              "name": "RATING"
+            },
+            {
+              "enabled": false,
+              "name": "RATING_MAPPED"
+            },
+            {
+              "enabled": true,
+              "name": "BODY"
+            }
+          ],
+          "table.pivot_column": "RATING",
+          "column_settings": {
+            "[\"name\",\"DATE_RECEIVED\"]": {
+              "date_abbreviate": true,
+              "date_style": "dddd, MMMM D, YYYY",
+              "time_enabled": null
+            }
+          }
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 25,
+      "parameter_mappings": [],
+      "card_id": 5,
+      "entity_id": "19JbScZRjz5mSQ7chtjuY",
+      "visualization_settings": {},
+      "size_y": 10,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 33
+    },
+    {
+      "size_x": 14,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Flow from viewing our website (empty) to checkout and subscribe",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 7,
+        "result_metadata": [
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "BUTTON_LABEL",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              29,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 29,
+            "visibility_type": "normal",
+            "display_name": "Button Label",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "field",
+              "count",
+              {
+                "base-type": "type/Integer"
+              }
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Checkout funnel",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "01f099f8-26ea-49cb-ae5f-6fc10a0e32b1",
+                    "effective-type": "type/Text"
+                  },
+                  29
+                ]
+              ],
+              "aggregation": [
+                [
+                  "count",
+                  {
+                    "lib/uuid": "33a17e08-fc39-4d7a-a84d-675f99fddd94"
+                  }
+                ]
+              ],
+              "source-table": 7
+            },
+            {
+              "lib/type": "mbql.stage/mbql",
+              "filters": [
+                [
+                  "not-empty",
+                  {
+                    "lib/uuid": "c759d706-e46d-4998-ac94-eb01398974ba"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Text",
+                      "lib/uuid": "89563475-c033-4788-8fb3-2329bd0b1d21"
+                    },
+                    "BUTTON_LABEL"
+                  ]
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 6,
+        "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"not-empty\",[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}]],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",29,{\"base-type\":\"type/Text\"}]],\"source-table\":7}},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "funnel",
+        "archived_directly": false,
+        "entity_id": "UUZZsw19IuPTqdhho99oc",
+        "collection_preview": true,
+        "visualization_settings": {
+          "funnel.order_dimension": "BUTTON_LABEL",
+          "funnel.rows": [
+            {
+              "enabled": true,
+              "key": "Create Item",
+              "name": "Create Item"
+            },
+            {
+              "enabled": true,
+              "key": "Invite",
+              "name": "Invite"
+            },
+            {
+              "enabled": true,
+              "key": "Subscribe",
+              "name": "Subscribe"
+            },
+            {
+              "enabled": true,
+              "key": "Signup",
+              "name": "Signup"
+            },
+            {
+              "enabled": true,
+              "key": "Checkout",
+              "name": "Checkout"
+            }
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 26,
+      "parameter_mappings": [],
+      "card_id": 6,
+      "entity_id": "fx-Zfyq1gaIcq2axhIRls",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 9
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Orders for each product, grouped by product category",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The name of the product as it should be displayed to customers.",
+            "semantic_type": "type/Title",
+            "coercion_strategy": null,
+            "name": "TITLE",
+            "settings": {
+              "link_url": "",
+              "view_as": null
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              17,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 17,
+            "visibility_type": "normal",
+            "display_name": "Product → Title",
+            "base_type": "type/Text"
+          },
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "field",
+              "count",
+              {
+                "base-type": "type/Integer"
+              }
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Product breakdown",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "827794ae-04fd-418f-84d8-c8994f7ca97c",
+                    "effective-type": "type/Text"
+                  },
+                  17
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "1bf8890a-9e0d-47b9-8513-527170016d52",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "aggregation": [
+                [
+                  "count",
+                  {
+                    "lib/uuid": "8304500c-cda0-4cef-af92-a5a1d2bb2f41"
+                  }
+                ]
+              ],
+              "source-table": 2
+            },
+            {
+              "lib/type": "mbql.stage/mbql",
+              "filters": [
+                [
+                  ">=",
+                  {
+                    "lib/uuid": "f2381698-1347-4f3f-8188-c61e1a1f8736"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Integer",
+                      "lib/uuid": "7a78ba68-7e7b-4d05-a800-450ef6d778e8"
+                    },
+                    "count"
+                  ],
+                  105
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 7,
+        "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\">=\",[\"field\",\"count\",{\"base-type\":\"type/Integer\"}],105],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"source-table\":2}},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "pie",
+        "archived_directly": false,
+        "entity_id": "RpKYsFwHfjcckbgj4oBKK",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.y_axis.title_text": "",
+          "graph.show_values": true,
+          "pie.slice_threshold": 11,
+          "pie.percent_visibility": "legend",
+          "pie.dimension": [
+            "CATEGORY",
+            "TITLE",
+            "count"
+          ],
+          "graph.series_order_dimension": null,
+          "graph.x_axis.title_text": "",
+          "pie.sort_rows": false,
+          "pie.rows": [
+            {
+              "color": "#51528D",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Doohickey",
+              "name": "Doohickey",
+              "originalName": "Doohickey"
+            },
+            {
+              "color": "#8A5EB0",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Gadget",
+              "name": "Gadget",
+              "originalName": "Gadget"
+            },
+            {
+              "color": "#69C8C8",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Gizmo",
+              "name": "Gizmo",
+              "originalName": "Gizmo"
+            },
+            {
+              "color": "#227FD2",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Widget",
+              "name": "Widget",
+              "originalName": "Widget"
+            }
+          ],
+          "graph.metrics": [
+            "count"
+          ],
+          "graph.series_order": null,
+          "pie.decimal_places": 2,
+          "series_settings": {
+            "count": {
+              "color": "#999AC4"
+            }
+          },
+          "graph.dimensions": [
+            "TITLE"
+          ],
+          "stackable.stack_type": null
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 15,
+      "parameter_mappings": [],
+      "card_id": 7,
+      "entity_id": "wuIanq5bdBiexA3yhyO0w",
+      "visualization_settings": {},
+      "size_y": 8,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 2
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Analysis of discounts given vs. the size of the order",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The date and time an order was submitted.",
+            "semantic_type": "type/CreationTimestamp",
+            "coercion_strategy": null,
+            "unit": "quarter",
+            "name": "CREATED_AT",
+            "settings": {
+              "time_enabled": "milliseconds"
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 13,
+            "visibility_type": "normal",
+            "display_name": "Created At: Quarter",
+            "base_type": "type/DateTime"
+          },
+          {
+            "description": "Number of products bought.",
+            "semantic_type": "type/Quantity",
+            "coercion_strategy": null,
+            "name": "QUANTITY",
+            "settings": {
+              "show_mini_bar": false
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              2,
+              {
+                "base-type": "type/Integer",
+                "binning": {
+                  "strategy": "num-bins",
+                  "min-value": 0.0,
+                  "max-value": 100.0,
+                  "num-bins": 8,
+                  "bin-width": 12.5
+                }
+              }
+            ],
+            "effective_type": "type/Decimal",
+            "id": 2,
+            "visibility_type": "normal",
+            "display_name": "Quantity",
+            "base_type": "type/Decimal"
+          },
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "sum",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Discount",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              1
+            ],
+            "name": "sum_2",
+            "semantic_type": "type/Discount",
+            "settings": null
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "aggregation",
+              2
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Total order amount vs. discount given",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "temporal-unit": "quarter",
+                    "lib/uuid": "55206a53-462f-40e5-89b7-6467cddce45e",
+                    "effective-type": "type/DateTime"
+                  },
+                  13
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Integer",
+                    "binning": {
+                      "strategy": "default"
+                    },
+                    "lib/uuid": "9fec9033-ff7c-4bbc-842c-b466476a8fe5",
+                    "effective-type": "type/Integer"
+                  },
+                  2
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "516a928b-ea42-4c16-bf73-28cc940e784c",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "aggregation": [
+                [
+                  "sum",
+                  {
+                    "lib/uuid": "94b6a77a-fa4b-44d1-89d5-004f51be5e54"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "914dc680-cfec-449f-97a7-a1b62dff2f0c",
+                      "effective-type": "type/Float"
+                    },
+                    5
+                  ]
+                ],
+                [
+                  "sum",
+                  {
+                    "lib/uuid": "057cb5b6-fd26-4f7e-86e0-64e796cdc828"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "bc72abed-6ede-45b3-831e-3ad53c77781e",
+                      "effective-type": "type/Float"
+                    },
+                    3
+                  ]
+                ],
+                [
+                  "count",
+                  {
+                    "lib/uuid": "407b6bb4-47c5-4c11-95b6-e54cd54518cd"
+                  }
+                ]
+              ],
+              "source-table": 2
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 8,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"sum\",[\"field\",5,{\"base-type\":\"type/Float\"}]],[\"sum\",[\"field\",3,{\"base-type\":\"type/Float\"}]],[\"count\"]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}],[\"field\",2,{\"base-type\":\"type/Integer\",\"binning\":{\"strategy\":\"default\"}}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "scatter",
+        "archived_directly": false,
+        "entity_id": "X8HNuB_i3j2uNFnsx3vQ0",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.show_trendline": false,
+          "graph.y_axis.title_text": "Discount",
+          "scatter.bubble": "count",
+          "graph.series_order_dimension": null,
+          "graph.x_axis.title_text": "Total",
+          "graph.metrics": [
+            "sum_2"
+          ],
+          "graph.tooltip_columns": [
+            "[\"name\",\"count\"]"
+          ],
+          "graph.series_order": null,
+          "column_settings": {
+            "[\"name\",\"sum_2\"]": {
+              "decimals": 0
+            }
+          },
+          "series_settings": {
+            "Doohickey": {
+              "color": "#7172AD"
+            },
+            "Gadget": {
+              "color": "#999AC4"
+            },
+            "Gizmo": {
+              "color": "#C7EAEA"
+            },
+            "Widget": {
+              "color": "#227FD2"
+            },
+            "sum_2": {
+              "color": "#7172AD"
+            }
+          },
+          "graph.dimensions": [
+            "sum",
+            "CATEGORY"
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 12,
+      "id": 19,
+      "parameter_mappings": [
+        {
+          "card_id": 8,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 8,
+      "entity_id": "-IoAlBOQzsTLapLzSFQoE",
+      "visualization_settings": {},
+      "size_y": 8,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 2
+    },
+    {
+      "size_x": 14,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Number of seats in an average subscription, showing increase and decrease",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 6,
+        "result_metadata": [
+          {
+            "description": null,
+            "semantic_type": "type/CreationTimestamp",
+            "coercion_strategy": null,
+            "unit": "year",
+            "name": "CREATED_AT",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              31,
+              {
+                "base-type": "type/DateTime",
+                "original-temporal-unit": "month"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 31,
+            "visibility_type": "normal",
+            "display_name": "Created At: Year",
+            "base_type": "type/DateTime"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Sum of Seats",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "field",
+              "sum",
+              {
+                "base-type": "type/Integer"
+              }
+            ],
+            "name": "sum",
+            "semantic_type": null
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Subscription seats over time",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "temporal-unit": "year",
+                    "base-type": "type/DateTime",
+                    "original-temporal-unit": "month",
+                    "lib/uuid": "1a2ae750-d79b-407f-86f5-459c4bf5118a",
+                    "effective-type": "type/DateTime"
+                  },
+                  31
+                ]
+              ],
+              "aggregation": [
+                [
+                  "sum",
+                  {
+                    "lib/uuid": "728e1c6b-61c5-4d16-bbab-771b31c0f901"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Integer",
+                      "lib/uuid": "ad904764-f671-4d42-a346-6d6bbe9e60de",
+                      "effective-type": "type/Integer"
+                    },
+                    33
+                  ]
+                ]
+              ],
+              "source-table": 6
+            },
+            {
+              "lib/type": "mbql.stage/mbql",
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "include-current": true,
+                    "lib/uuid": "f04db393-6953-4ef8-8dc4-dec9f081bf0e"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "inherited-temporal-unit": "year",
+                      "lib/uuid": "28fa162e-67b5-4876-9787-a0ffa75db21f"
+                    },
+                    "CREATED_AT"
+                  ],
+                  -3,
+                  "year"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 14,
+        "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"time-interval\",[\"field\",\"CREATED_AT\",{\"base-type\":\"type/DateTime\",\"inherited-temporal-unit\":\"year\"}],-3,\"year\",{\"include-current\":true}],\"source-query\":{\"aggregation\":[[\"sum\",[\"field\",33,{\"base-type\":\"type/Integer\"}]]],\"breakout\":[[\"field\",31,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"year\",\"original-temporal-unit\":\"month\"}]],\"source-table\":6}},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "waterfall",
+        "archived_directly": false,
+        "entity_id": "C8V7Dszig-vuqn9TP0igc",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.dimensions": [
+            "CREATED_AT"
+          ],
+          "graph.show_values": true,
+          "graph.x_axis.title_text": "",
+          "graph.y_axis.title_text": "",
+          "graph.metrics": [
+            "sum"
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 34,
+      "parameter_mappings": [
+        {
+          "card_id": 14,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              31,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            {
+              "stage-number": 1
+            }
+          ]
+        }
+      ],
+      "card_id": 14,
+      "entity_id": "VkOq2o1cbIeE2MYeP4mfx",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 16
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Orders placed per quarter broken down by source and formatted to highlight best and worst quarters",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter",
+            "semantic_type": null,
+            "coercion_strategy": null,
+            "name": "SOURCE",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "expression",
+              "pivot-grouping"
+            ],
+            "effective_type": "type/Text",
+            "id": 30,
+            "visibility_type": "normal",
+            "display_name": "pivot-grouping",
+            "base_type": "type/Integer"
+          },
+          {
+            "description": "The date and time an order was submitted.",
+            "semantic_type": "type/Currency",
+            "coercion_strategy": null,
+            "name": "CREATED_AT",
+            "settings": {
+              "time_enabled": "milliseconds"
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "effective_type": "type/DateTime",
+            "id": 13,
+            "visibility_type": "normal",
+            "display_name": "Sum of Total",
+            "base_type": "type/Float"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Orders according to sources per quarter",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "aggregation": [
+                [
+                  "metric",
+                  {
+                    "lib/uuid": "240c5a4a-b2ff-46ae-bc82-76010fbca9f2"
+                  },
+                  9
+                ]
+              ],
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 11,
+                    "lib/uuid": "fe3cbe9f-48b4-42b1-96a2-3511811c1b8a",
+                    "effective-type": "type/Text"
+                  },
+                  30
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "temporal-unit": "quarter",
+                    "lib/uuid": "ab5c40ae-79c9-413f-a98b-9321abc885e0",
+                    "effective-type": "type/DateTime"
+                  },
+                  13
+                ]
+              ],
+              "source-table": 2,
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "include-current": true,
+                    "lib/uuid": "a52eec96-6082-4e9c-a90d-53b9425760fd"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "b38d3054-6887-449e-b9ad-279f00014db1",
+                      "effective-type": "type/DateTime"
+                    },
+                    13
+                  ],
+                  -2,
+                  "year"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 10,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9]],\"breakout\":[[\"field\",30,{\"base-type\":\"type/Text\",\"source-field\":11}],[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-2,\"year\",{\"include-current\":true}],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "pivot",
+        "archived_directly": false,
+        "entity_id": "km2d9-ZqHrlAM79yPh13G",
+        "collection_preview": true,
+        "visualization_settings": {
+          "pivot_table.column_split": {
+            "columns": [
+              "SOURCE"
+            ],
+            "rows": [
+              "CREATED_AT"
+            ],
+            "values": [
+              "sum"
+            ]
+          },
+          "pivot_table.column_widths": {
+            "leftHeaderWidths": [
+              135
+            ],
+            "totalLeftHeaderWidths": 135,
+            "valueHeaderWidths": {
+              "0": 148,
+              "1": 158,
+              "2": 159,
+              "3": 144,
+              "4": 139,
+              "5": 124
+            }
+          },
+          "table.column_formatting": [
+            {
+              "max_value": 100,
+              "color": "#509EE3",
+              "columns": [
+                "sum"
+              ],
+              "value": "",
+              "type": "range",
+              "colors": [
+                "white",
+                "#A7D07C"
+              ],
+              "highlight_row": false,
+              "min_value": 0,
+              "min_type": null,
+              "id": 0,
+              "operator": "=",
+              "max_type": null
+            }
+          ],
+          "column_settings": {
+            "[\"name\",\"CREATED_AT\"]": {
+              "column_title": "Date"
+            }
+          }
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 12,
+      "parameter_mappings": [
+        {
+          "card_id": 10,
+          "parameter_id": "1ebab259",
+          "target": [
+            "dimension",
+            [
+              "field",
+              34,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 10,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 10,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 10,
+          "parameter_id": "efd919c7",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 10,
+      "entity_id": "fRjV39ywXfG8mj6NFsXH4",
+      "visualization_settings": {},
+      "size_y": 8,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 26
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Sankey flow from visiting our website to taking an action",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 7,
+        "result_metadata": [
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "BUTTON_LABEL",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              29,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 29,
+            "visibility_type": "normal",
+            "display_name": "Button Label",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "EVENT",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              32,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 32,
+            "visibility_type": "normal",
+            "display_name": "Event",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "field",
+              "count",
+              {
+                "base-type": "type/Integer"
+              }
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          },
+          {
+            "base_type": "type/Text",
+            "display_name": "Step",
+            "effective_type": "type/Text",
+            "field_ref": [
+              "expression",
+              "Step"
+            ],
+            "name": "Step",
+            "semantic_type": null
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "User flow diagram",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "4d13cbc3-1610-44d9-adb2-c5a417b41753",
+                    "effective-type": "type/Text"
+                  },
+                  29
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "4c6071a5-5fd2-442e-b8af-eaeb18db59a8",
+                    "effective-type": "type/Text"
+                  },
+                  32
+                ]
+              ],
+              "aggregation": [
+                [
+                  "count",
+                  {
+                    "lib/uuid": "fb500810-fe92-4969-9b15-deab7d2ee147"
+                  }
+                ]
+              ],
+              "source-table": 7
+            },
+            {
+              "lib/type": "mbql.stage/mbql",
+              "expressions": [
+                [
+                  "case",
+                  {
+                    "lib/uuid": "1538e96b-a17e-44a6-aa3e-86fb61f106e2",
+                    "lib/expression-name": "Step"
+                  },
+                  [
+                    [
+                      [
+                        "is-null",
+                        {
+                          "lib/uuid": "9f13f4e0-4866-446b-9761-5cb1fadbbb52"
+                        },
+                        [
+                          "field",
+                          {
+                            "base-type": "type/Text",
+                            "lib/uuid": "eafc214c-04ef-4a4c-a47a-0c93bfbaca74"
+                          },
+                          "BUTTON_LABEL"
+                        ]
+                      ],
+                      "Bounced"
+                    ]
+                  ],
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Text",
+                      "lib/uuid": "5767ab92-c4d1-47b0-968a-8308ed7a00b6"
+                    },
+                    "BUTTON_LABEL"
+                  ]
+                ]
+              ],
+              "filters": [
+                [
+                  "!=",
+                  {
+                    "lib/uuid": "2c8d8d7c-fa00-4de9-9acd-acfbc56be80e"
+                  },
+                  [
+                    "expression",
+                    {
+                      "base-type": "type/Text",
+                      "lib/uuid": "43a081b0-c90c-490c-9d45-93fcb05eadba"
+                    },
+                    "Step"
+                  ],
+                  "Bounced"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 11,
+        "legacy_query": "{\"database\":1,\"query\":{\"expressions\":{\"Step\":[\"case\",[[[\"is-null\",[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}]],\"Bounced\"]],{\"default\":[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}]}]},\"filter\":[\"!=\",[\"expression\",\"Step\",{\"base-type\":\"type/Text\"}],\"Bounced\"],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",29,{\"base-type\":\"type/Text\"}],[\"field\",32,{\"base-type\":\"type/Text\"}]],\"source-table\":7}},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "sankey",
+        "archived_directly": false,
+        "entity_id": "9VE9Z6tAkyzO3GeQVXtin",
+        "collection_preview": true,
+        "visualization_settings": {
+          "sankey.edge_color": "source",
+          "sankey.node_align": "right",
+          "sankey.show_edge_labels": true,
+          "sankey.source": "EVENT",
+          "sankey.target": "Step"
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 30,
+      "parameter_mappings": [],
+      "card_id": 11,
+      "entity_id": "x6_b5ifhvPkZKw3ZgFcPy",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 2
+    },
+    {
+      "size_x": 17,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Cumulative revenue overlaid with number of orders placed each month",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The date and time an order was submitted.",
+            "semantic_type": "type/CreationTimestamp",
+            "coercion_strategy": null,
+            "unit": "quarter",
+            "name": "CREATED_AT",
+            "settings": {
+              "time_enabled": "milliseconds"
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 13,
+            "visibility_type": "normal",
+            "display_name": "Created At: Quarter",
+            "base_type": "type/DateTime"
+          },
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "sum",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Sum of Quantity",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "aggregation",
+              1
+            ],
+            "name": "sum_2",
+            "semantic_type": "type/Quantity",
+            "settings": {
+              "show_mini_bar": false
+            }
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Discount",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              2
+            ],
+            "name": "sum_3",
+            "semantic_type": "type/Discount",
+            "settings": null
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "aggregation",
+              3
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Revenue and orders over time",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "aggregation": [
+                [
+                  "metric",
+                  {
+                    "lib/uuid": "6a214701-052d-411c-85b9-97aaaf4f3554"
+                  },
+                  9
+                ],
+                [
+                  "sum",
+                  {
+                    "lib/uuid": "255d0646-a8f1-4555-8b0e-96049c3fe662"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Integer",
+                      "lib/uuid": "2cfed2a8-89e1-4b9d-9e23-fee1b8969fd6",
+                      "effective-type": "type/Integer"
+                    },
+                    2
+                  ]
+                ],
+                [
+                  "sum",
+                  {
+                    "lib/uuid": "59858210-9173-482a-9be4-6879b94fc96e"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "0fcc7f9d-0299-4216-af97-b7c9a7ea8195",
+                      "effective-type": "type/Float"
+                    },
+                    3
+                  ]
+                ],
+                [
+                  "count",
+                  {
+                    "lib/uuid": "ca1537b4-c759-452c-9268-9a8e5362330d"
+                  }
+                ]
+              ],
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "temporal-unit": "quarter",
+                    "lib/uuid": "743697b2-166e-4655-9270-d8f9b1893887",
+                    "effective-type": "type/DateTime"
+                  },
+                  13
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "3c5ebc18-17db-42c9-a192-fd5d83fc500b",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "source-table": 2,
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "include-current": true,
+                    "lib/uuid": "65dc70d8-37c1-42ec-a2ef-7e34758c0cb0"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "a0833689-5ec3-4afa-8a68-77603163d6f3",
+                      "effective-type": "type/DateTime"
+                    },
+                    13
+                  ],
+                  -2,
+                  "year"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 12,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9],[\"sum\",[\"field\",2,{\"base-type\":\"type/Integer\"}]],[\"sum\",[\"field\",3,{\"base-type\":\"type/Float\"}]],[\"count\"]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-2,\"year\",{\"include-current\":true}],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "combo",
+        "archived_directly": false,
+        "entity_id": "VFCGVYPVtLzCtt4teeoW4",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.show_trendline": false,
+          "graph.y_axis.title_text": "",
+          "graph.show_values": true,
+          "graph.series_order_dimension": null,
+          "graph.x_axis.title_text": "",
+          "graph.label_value_frequency": "fit",
+          "graph.metrics": [
+            "sum",
+            "sum_2"
+          ],
+          "graph.tooltip_columns": [
+            "[\"name\",\"count\"]",
+            "[\"name\",\"sum_3\"]"
+          ],
+          "graph.label_value_formatting": "compact",
+          "graph.series_order": null,
+          "column_settings": {},
+          "series_settings": {
+            "sum": {
+              "color": "#88BF4D",
+              "line.interpolate": "linear",
+              "line.marker_enabled": false,
+              "line.size": "L",
+              "line.style": "solid",
+              "title": "Revenue"
+            },
+            "sum_2": {
+              "color": "#7172AD",
+              "title": "Orders"
+            }
+          },
+          "graph.dimensions": [
+            "CREATED_AT"
+          ],
+          "stackable.stack_type": "stacked"
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 6,
+      "parameter_mappings": [
+        {
+          "card_id": 12,
+          "parameter_id": "1ebab259",
+          "target": [
+            "dimension",
+            [
+              "field",
+              34,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 12,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 12,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 12,
+          "parameter_id": "efd919c7",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 12,
+      "entity_id": "mM0yHMzeaWUi0uJkT1puj",
+      "visualization_settings": {},
+      "size_y": 8,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 2
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Monthly revenue broken down by products",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The date and time an order was submitted.",
+            "semantic_type": "type/CreationTimestamp",
+            "coercion_strategy": null,
+            "unit": "month",
+            "name": "CREATED_AT",
+            "settings": {
+              "time_enabled": "milliseconds"
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "month",
+                "original-temporal-unit": "quarter"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 13,
+            "visibility_type": "normal",
+            "display_name": "Created At: Month",
+            "base_type": "type/DateTime"
+          },
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "sum",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Average of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              1
+            ],
+            "name": "avg",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Max of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              2
+            ],
+            "name": "max",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Discount",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              3
+            ],
+            "name": "sum_2",
+            "semantic_type": "type/Discount",
+            "settings": null
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Revenue by product category",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "aggregation": [
+                [
+                  "metric",
+                  {
+                    "lib/uuid": "841a35eb-f8c4-45cd-807b-9a7ee9365271"
+                  },
+                  9
+                ],
+                [
+                  "avg",
+                  {
+                    "lib/uuid": "f168c95e-e008-42e6-8580-f6d3cd660d14"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "70456c5b-98ea-4ba2-bc53-c31aa2235f38",
+                      "effective-type": "type/Float"
+                    },
+                    5
+                  ]
+                ],
+                [
+                  "max",
+                  {
+                    "lib/uuid": "d6428e1d-9755-4c64-a467-1512ee27b88c"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "5d104d03-3315-4e02-a07b-242157fecf56",
+                      "effective-type": "type/Float"
+                    },
+                    5
+                  ]
+                ],
+                [
+                  "sum",
+                  {
+                    "lib/uuid": "f703389d-f369-440a-ae91-81bf40b71734"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "65552de0-8fb8-4f17-9d43-8c8c9eaa1ef2",
+                      "effective-type": "type/Float"
+                    },
+                    3
+                  ]
+                ]
+              ],
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "temporal-unit": "month",
+                    "base-type": "type/DateTime",
+                    "original-temporal-unit": "quarter",
+                    "lib/uuid": "3e48cd8c-05b8-4c95-9c7c-0be25591d6a9",
+                    "effective-type": "type/DateTime"
+                  },
+                  13
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "6e223e77-2628-49ba-9973-ee0b576330f4",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "source-table": 2,
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "lib/uuid": "eacb85c1-6156-425a-b47c-0b76fa56c498"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "e05ba7b0-d69c-45d6-b5a9-b073dc4d65a9",
+                      "effective-type": "type/DateTime"
+                    },
+                    13
+                  ],
+                  -4,
+                  "month"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 13,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9],[\"avg\",[\"field\",5,{\"base-type\":\"type/Float\"}]],[\"max\",[\"field\",5,{\"base-type\":\"type/Float\"}]],[\"sum\",[\"field\",3,{\"base-type\":\"type/Float\"}]]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"month\",\"original-temporal-unit\":\"quarter\"}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-4,\"month\"],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "bar",
+        "archived_directly": false,
+        "entity_id": "-6yAP_G1UZ7xZc4E65Tvy",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.y_axis.title_text": "",
+          "graph.show_values": true,
+          "graph.x_axis.title_text": "",
+          "graph.metrics": [
+            "sum",
+            "avg",
+            "max",
+            "sum_2"
+          ],
+          "graph.tooltip_columns": [
+            "[\"name\",\"sum_2\"]",
+            "[\"name\",\"avg\"]",
+            "[\"name\",\"max\"]"
+          ],
+          "graph.show_stack_values": "all",
+          "graph.label_value_formatting": "compact",
+          "series_settings": {
+            "Doohickey": {
+              "color": "#7172AD"
+            },
+            "Gadget": {
+              "color": "#A989C5"
+            },
+            "Gizmo": {
+              "color": "#C7EAEA"
+            },
+            "Widget": {
+              "color": "#227FD2"
+            }
+          },
+          "graph.dimensions": [
+            "CREATED_AT",
+            "CATEGORY"
+          ],
+          "stackable.stack_type": "stacked"
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 12,
+      "id": 10,
+      "parameter_mappings": [
+        {
+          "card_id": 13,
+          "parameter_id": "1ebab259",
+          "target": [
+            "dimension",
+            [
+              "field",
+              34,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 13,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "month",
+                "original-temporal-unit": "quarter"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 13,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 13,
+          "parameter_id": "efd919c7",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "month",
+                "original-temporal-unit": "quarter"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 13,
+      "entity_id": "3MGVK2PTcGxJwDXlDqjSE",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 12
+    },
+    {
+      "size_x": 7,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Total revenue last quarter compared to the previous",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The date and time an order was submitted.",
+            "semantic_type": "type/CreationTimestamp",
+            "coercion_strategy": null,
+            "unit": "quarter",
+            "name": "CREATED_AT",
+            "settings": {
+              "time_enabled": "milliseconds"
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 13,
+            "visibility_type": "normal",
+            "display_name": "Created At: Quarter",
+            "base_type": "type/DateTime"
+          },
+          {
+            "base_type": "type/Float",
+            "display_name": "Sum of Total",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "sum",
+            "semantic_type": "type/Currency",
+            "settings": {
+              "currency": "USD"
+            }
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Revenue per quarter",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "temporal-unit": "quarter",
+                    "lib/uuid": "8a161419-ceef-4670-a4cd-7079394c2900",
+                    "effective-type": "type/DateTime"
+                  },
+                  13
+                ]
+              ],
+              "aggregation": [
+                [
+                  "metric",
+                  {
+                    "lib/uuid": "5a1bdb0f-8ede-4ab3-9120-4113faa0b551"
+                  },
+                  9
+                ]
+              ],
+              "source-table": 2
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 15,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}]],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "smartscalar",
+        "archived_directly": false,
+        "entity_id": "D4o8cCTOY-SnxoYDRVWcO",
+        "collection_preview": true,
+        "visualization_settings": {
+          "scalar.comparisons": [
+            {
+              "id": "a8d008d4-d8f1-cbc1-b0ad-f4ab30791b9e",
+              "type": "previousPeriod"
+            },
+            {
+              "id": "e7fa0d15-867c-2628-dbea-9f9a41e3ca38",
+              "type": "periodsAgo",
+              "value": 4
+            }
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 17,
+      "id": 8,
+      "parameter_mappings": [
+        {
+          "card_id": 15,
+          "parameter_id": "1ebab259",
+          "target": [
+            "dimension",
+            [
+              "field",
+              34,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 15,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 15,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 15,
+          "parameter_id": "efd919c7",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 15,
+      "entity_id": "_VxmRsylZKkpe0H-lGwyT",
+      "visualization_settings": {},
+      "size_y": 4,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 2
+    },
+    {
+      "size_x": 10,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Customers that signed up for our monthly subscription",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 7,
+        "result_metadata": [
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "BUTTON_LABEL",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              29,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 29,
+            "visibility_type": "normal",
+            "display_name": "Button Label",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/CreationDate",
+            "coercion_strategy": null,
+            "unit": "month",
+            "name": "TIMESTAMP",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              35,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 35,
+            "visibility_type": "normal",
+            "display_name": "Timestamp: Month",
+            "base_type": "type/DateTime"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "field",
+              "count",
+              {
+                "base-type": "type/Integer"
+              }
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Number of subscriptions",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "9d9b3f9e-a454-4e81-ae83-3db54e0fc65a",
+                    "effective-type": "type/Text"
+                  },
+                  29
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "temporal-unit": "month",
+                    "lib/uuid": "c0ba3c6f-0d2d-4bd5-a7e1-247bbcb6e6f7",
+                    "effective-type": "type/DateTime"
+                  },
+                  35
+                ]
+              ],
+              "aggregation": [
+                [
+                  "count",
+                  {
+                    "lib/uuid": "cb0fc806-f045-477e-8a57-a6c8e2c9faac"
+                  }
+                ]
+              ],
+              "source-table": 7
+            },
+            {
+              "lib/type": "mbql.stage/mbql",
+              "filters": [
+                [
+                  "=",
+                  {
+                    "lib/uuid": "06f2c8c4-ad52-4faf-b703-0b06ced29b0d"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Text",
+                      "lib/uuid": "77c78ee9-7b33-4d42-ac81-bc768894e592"
+                    },
+                    "BUTTON_LABEL"
+                  ],
+                  "Subscribe"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 16,
+        "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"=\",[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}],\"Subscribe\"],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",29,{\"base-type\":\"type/Text\"}],[\"field\",35,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"month\"}]],\"source-table\":7}},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "area",
+        "archived_directly": false,
+        "entity_id": "qQ3JGGOxVC8mrOLwxpcR6",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.show_trendline": true,
+          "graph.y_axis.title_text": "",
+          "graph.show_values": true,
+          "graph.series_order_dimension": null,
+          "graph.x_axis.title_text": "",
+          "graph.metrics": [
+            "count"
+          ],
+          "scalar.field": "count",
+          "graph.series_order": null,
+          "series_settings": {
+            "Subscribe": {
+              "color": "#7172AD",
+              "line.interpolate": "linear",
+              "title": "Subscriptions"
+            },
+            "count": {
+              "color": "#7172AD"
+            }
+          },
+          "graph.dimensions": [
+            "TIMESTAMP"
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 14,
+      "id": 27,
+      "parameter_mappings": [
+        {
+          "card_id": 16,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              "TIMESTAMP",
+              {
+                "base-type": "type/DateTime",
+                "inherited-temporal-unit": "month"
+              }
+            ],
+            {
+              "stage-number": 1
+            }
+          ]
+        }
+      ],
+      "card_id": 16,
+      "entity_id": "wZV8zAS2XAMH_ub1DG58A",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 9
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Shows a distribution of orders broken down by product category across our customers' individual age values",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": 1,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "base_type": "type/Decimal",
+            "description": "Age of the customer in years.",
+            "display_name": "Age",
+            "effective_type": "type/Decimal",
+            "field_ref": [
+              "field",
+              "Age",
+              {
+                "base-type": "type/BigInteger"
+              }
+            ],
+            "name": "Age",
+            "semantic_type": "type/Quantity"
+          },
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "join-alias": "Products"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Products → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Product category orders per age",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "joins": [
+                {
+                  "alias": "Products",
+                  "strategy": "left-join",
+                  "conditions": [
+                    [
+                      "=",
+                      {
+                        "lib/uuid": "6b0e6025-592a-4522-b18f-58afad59e270"
+                      },
+                      [
+                        "field",
+                        {
+                          "base-type": "type/Integer",
+                          "lib/uuid": "668e5e39-6329-43d0-b81a-22c75e709727"
+                        },
+                        "PRODUCT_ID"
+                      ],
+                      [
+                        "field",
+                        {
+                          "base-type": "type/BigInteger",
+                          "join-alias": "Products",
+                          "lib/uuid": "32824199-a9b7-46db-bf06-8ff50f1a2592",
+                          "effective-type": "type/BigInteger"
+                        },
+                        8
+                      ]
+                    ]
+                  ],
+                  "lib/type": "mbql/join",
+                  "stages": [
+                    {
+                      "lib/type": "mbql.stage/mbql",
+                      "source-table": 3
+                    }
+                  ]
+                }
+              ],
+              "aggregation": [
+                [
+                  "count",
+                  {
+                    "lib/uuid": "be979303-ffda-412c-9175-f3e571adcb9e"
+                  }
+                ]
+              ],
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/BigInteger",
+                    "lib/uuid": "b44d8061-a20c-43c2-b31e-2cbe681cdbae"
+                  },
+                  "Age"
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "join-alias": "Products",
+                    "lib/uuid": "9fa78fea-abd7-4bae-be65-0c143236e5ee",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "source-card": 1
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 18,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",\"Age\",{\"base-type\":\"type/BigInteger\"}],[\"field\",18,{\"base-type\":\"type/Text\",\"join-alias\":\"Products\"}]],\"joins\":[{\"alias\":\"Products\",\"condition\":[\"=\",[\"field\",\"PRODUCT_ID\",{\"base-type\":\"type/Integer\"}],[\"field\",8,{\"base-type\":\"type/BigInteger\",\"join-alias\":\"Products\"}]],\"source-table\":3,\"strategy\":\"left-join\"}],\"source-table\":\"card__1\"},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "bar",
+        "archived_directly": false,
+        "entity_id": "byM0vLfOiM1zBI_t1MUcO",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.dimensions": [
+            "Age",
+            "CATEGORY"
+          ],
+          "graph.show_values": true,
+          "graph.x_axis.scale": "linear",
+          "series_settings": {
+            "Doohickey": {
+              "color": "#7172AD"
+            },
+            "Gadget": {
+              "color": "#999AC4"
+            },
+            "Gizmo": {
+              "color": "#C7EAEA"
+            },
+            "Widget": {
+              "color": "#227FD2"
+            }
+          },
+          "stackable.stack_type": "normalized",
+          "graph.metrics": [
+            "count"
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 5,
+      "parameter_mappings": [],
+      "card_id": 18,
+      "entity_id": "4bnIg0l06MqSikGg2jPM1",
+      "visualization_settings": {},
+      "size_y": 6,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 18
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Breaks down the overall performance of each of the product categories",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Total orders by product category",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "74eda50d-a10b-4927-b666-e57e82beaf98",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "aggregation": [
+                [
+                  "metric",
+                  {
+                    "lib/uuid": "716ad6cf-6f18-4647-9ed8-b273295a1c40"
+                  },
+                  19
+                ]
+              ],
+              "source-table": 2
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 20,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",19]],\"breakout\":[[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "pie",
+        "archived_directly": false,
+        "entity_id": "ShsD1PjGTlFIvzm5FM9qC",
+        "collection_preview": true,
+        "visualization_settings": {
+          "pie.decimal_places": 0,
+          "pie.percent_visibility": "both",
+          "pie.rows": [
+            {
+              "color": "#7172AD",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Doohickey",
+              "name": "Doohickey",
+              "originalName": "Doohickey"
+            },
+            {
+              "color": "#A989C5",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Gadget",
+              "name": "Gadget",
+              "originalName": "Gadget"
+            },
+            {
+              "color": "#C7EAEA",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Gizmo",
+              "name": "Gizmo",
+              "originalName": "Gizmo"
+            },
+            {
+              "color": "#227FD2",
+              "defaultColor": false,
+              "enabled": true,
+              "hidden": false,
+              "isOther": false,
+              "key": "Widget",
+              "name": "Widget",
+              "originalName": "Widget"
+            }
+          ],
+          "pie.show_labels": false,
+          "pie.sort_rows": false
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 13,
+      "parameter_mappings": [
+        {
+          "card_id": 20,
+          "parameter_id": "1ebab259",
+          "target": [
+            "dimension",
+            [
+              "field",
+              34,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 20,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 20,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 20,
+      "entity_id": "-zrxIkj-jscf4OwBR435T",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 12
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "An ordered list of our most successful products",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The name of the product as it should be displayed to customers.",
+            "semantic_type": "type/Title",
+            "coercion_strategy": null,
+            "name": "TITLE",
+            "settings": {
+              "link_url": "",
+              "view_as": null
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              17,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 17,
+            "visibility_type": "normal",
+            "display_name": "Product → Title",
+            "base_type": "type/Text"
+          },
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "field",
+              "count",
+              {
+                "base-type": "type/Integer"
+              }
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Best selling products",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "order-by": [
+                [
+                  "desc",
+                  {
+                    "lib/uuid": "ba0a50d0-92af-465d-abb7-250c8d07413a"
+                  },
+                  [
+                    "aggregation",
+                    {
+                      "lib/uuid": "2d52c7e8-58ce-4ee5-b224-69294acbcd9a"
+                    },
+                    "8c1eeb11-eebe-4f76-859b-14aefef6935f"
+                  ]
+                ]
+              ],
+              "aggregation": [
+                [
+                  "count",
+                  {
+                    "lib/uuid": "8c1eeb11-eebe-4f76-859b-14aefef6935f"
+                  }
+                ]
+              ],
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "231abd35-54c8-403a-a826-7da42d1bb257",
+                    "effective-type": "type/Text"
+                  },
+                  17
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "86b4c29d-ce71-4cb4-bed4-03379df28cc8",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ]
+              ],
+              "source-table": 2,
+              "filters": [
+                [
+                  "!=",
+                  {
+                    "lib/uuid": "08300ff3-6a49-4ec6-a9fa-ff457874327f"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Text",
+                      "source-field": 14,
+                      "lib/uuid": "1971ab26-da09-480f-8f5d-a4612949172d",
+                      "effective-type": "type/Text"
+                    },
+                    17
+                  ],
+                  "Incredible Aluminum Knife"
+                ]
+              ]
+            },
+            {
+              "lib/type": "mbql.stage/mbql",
+              "filters": [
+                [
+                  ">=",
+                  {
+                    "lib/uuid": "5047ff63-e921-4d64-ac42-1980c7e28b87"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Integer",
+                      "lib/uuid": "9fd216f7-ef48-4a86-8072-10577c388668"
+                    },
+                    "count"
+                  ],
+                  110
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 21,
+        "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\">=\",[\"field\",\"count\",{\"base-type\":\"type/Integer\"}],110],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"filter\":[\"!=\",[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],\"Incredible Aluminum Knife\"],\"order-by\":[[\"desc\",[\"aggregation\",0]]],\"source-table\":2}},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "row",
+        "archived_directly": false,
+        "entity_id": "S-hEu1jZ2-822qvBQ1EiT",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.y_axis.title_text": "",
+          "graph.show_values": true,
+          "graph.series_order_dimension": null,
+          "graph.x_axis.title_text": "",
+          "graph.metrics": [
+            "count"
+          ],
+          "graph.series_order": null,
+          "series_settings": {
+            "count": {
+              "color": "#999AC4"
+            }
+          },
+          "graph.dimensions": [
+            "TITLE"
+          ],
+          "stackable.stack_type": null
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 1,
+      "parameter_mappings": [],
+      "card_id": 21,
+      "entity_id": "OO4kGtX3HOooGeROYUZJe",
+      "visualization_settings": {
+        "click_behavior": {
+          "parameterMapping": {
+            "9d9cddd4": {
+              "id": "9d9cddd4",
+              "source": {
+                "id": "CATEGORY",
+                "name": "Product → Category",
+                "type": "column"
+              },
+              "target": {
+                "id": "9d9cddd4",
+                "type": "parameter"
+              }
+            }
+          },
+          "type": "crossfilter"
+        }
+      },
+      "size_y": 8,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 10
+    },
+    {
+      "size_x": 10,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Indicates the average customer review of our products",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 3,
+        "result_metadata": [
+          {
+            "base_type": "type/Float",
+            "display_name": "Average of Rating",
+            "effective_type": "type/Float",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "avg",
+            "semantic_type": "type/Score",
+            "settings": null
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Average product rating",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "aggregation": [
+                [
+                  "avg",
+                  {
+                    "lib/uuid": "0ad7ccdd-117d-4e10-ab71-7f5e743c093f"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/Float",
+                      "lib/uuid": "4aadb02a-3280-4ef2-8a04-dfeb9f27252d",
+                      "effective-type": "type/Float"
+                    },
+                    16
+                  ]
+                ]
+              ],
+              "source-table": 3
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 22,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"avg\",[\"field\",16,{\"base-type\":\"type/Float\"}]]],\"source-table\":3},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "gauge",
+        "archived_directly": false,
+        "entity_id": "fKu0z-vEC1WwVv1Lu95jD",
+        "collection_preview": true,
+        "visualization_settings": {
+          "gauge.segments": [
+            {
+              "color": "#ED6E6E",
+              "label": "",
+              "max": 1,
+              "min": 0
+            },
+            {
+              "color": "#F2A86F",
+              "label": "",
+              "max": 2,
+              "min": 1
+            },
+            {
+              "color": "#F9D45C",
+              "label": "",
+              "max": 3,
+              "min": 2
+            },
+            {
+              "color": "#A7D07C",
+              "label": "",
+              "max": 4,
+              "min": 3
+            },
+            {
+              "color": "#689636",
+              "label": "",
+              "max": 5,
+              "min": 4
+            }
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 3,
+      "parameter_mappings": [],
+      "card_id": 22,
+      "entity_id": "YIP_KpvNnw0g7igNvwMVp",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 26
+    },
+    {
+      "size_x": 10,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "The most recent subscription in our database",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 6,
+        "result_metadata": [
+          {
+            "description": null,
+            "semantic_type": "type/PK",
+            "coercion_strategy": null,
+            "name": "ID",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              24,
+              {
+                "base-type": "type/BigInteger"
+              }
+            ],
+            "effective_type": "type/BigInteger",
+            "id": 24,
+            "visibility_type": "normal",
+            "display_name": "ID",
+            "base_type": "type/BigInteger"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Name",
+            "coercion_strategy": null,
+            "name": "FIRST_NAME",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              37,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 37,
+            "visibility_type": "normal",
+            "display_name": "First Name",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Name",
+            "coercion_strategy": null,
+            "name": "LAST_NAME",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              36,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 36,
+            "visibility_type": "normal",
+            "display_name": "Last Name",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "PLAN",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              43,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 43,
+            "visibility_type": "normal",
+            "display_name": "Plan",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Source",
+            "coercion_strategy": null,
+            "name": "SOURCE",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              41,
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 41,
+            "visibility_type": "normal",
+            "display_name": "Source",
+            "base_type": "type/Text"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/CreationTimestamp",
+            "coercion_strategy": null,
+            "name": "CREATED_AT",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              31,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 31,
+            "visibility_type": "normal",
+            "display_name": "Created At",
+            "base_type": "type/DateTime"
+          },
+          {
+            "description": null,
+            "semantic_type": null,
+            "coercion_strategy": null,
+            "name": "TRIAL_ENDS_AT",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              40,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 40,
+            "visibility_type": "normal",
+            "display_name": "Trial Ends At",
+            "base_type": "type/DateTime"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/CancelationTimestamp",
+            "coercion_strategy": null,
+            "name": "CANCELED_AT",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              39,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 39,
+            "visibility_type": "normal",
+            "display_name": "Canceled At",
+            "base_type": "type/DateTime"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "TRIAL_CONVERTED",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              38,
+              {
+                "base-type": "type/Boolean"
+              }
+            ],
+            "effective_type": "type/Boolean",
+            "id": 38,
+            "visibility_type": "normal",
+            "display_name": "Trial Converted",
+            "base_type": "type/Boolean"
+          },
+          {
+            "description": null,
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "ACTIVE_SUBSCRIPTION",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              42,
+              {
+                "base-type": "type/Boolean"
+              }
+            ],
+            "effective_type": "type/Boolean",
+            "id": 42,
+            "visibility_type": "normal",
+            "display_name": "Active Subscription",
+            "base_type": "type/Boolean"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Most recent subscription",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "order-by": [
+                [
+                  "desc",
+                  {
+                    "lib/uuid": "53380763-979f-42da-b82a-415feb400529"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "3fe3b08b-a3c8-4a55-ace2-bd77a07caeb0",
+                      "effective-type": "type/DateTime"
+                    },
+                    31
+                  ]
+                ]
+              ],
+              "fields": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/BigInteger",
+                    "lib/uuid": "112e7614-8285-4537-b447-754f828b2d41",
+                    "effective-type": "type/BigInteger"
+                  },
+                  24
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "979e84d3-f6ff-41d0-8538-66564f5a9c6c",
+                    "effective-type": "type/Text"
+                  },
+                  37
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "6b6c6a08-3bdc-4e5c-8ee8-be4957052182",
+                    "effective-type": "type/Text"
+                  },
+                  36
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "1c805d21-ce8c-4a78-ba9f-e0e074eed083",
+                    "effective-type": "type/Text"
+                  },
+                  43
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "lib/uuid": "c938acef-694a-4ae5-bfa3-97722307f91c",
+                    "effective-type": "type/Text"
+                  },
+                  41
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "lib/uuid": "8770e1c0-0ff4-4b79-96c2-02a1cff05b4c",
+                    "effective-type": "type/DateTime"
+                  },
+                  31
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "lib/uuid": "79adc37e-ddb4-4650-b0c6-99b78e964d40",
+                    "effective-type": "type/DateTime"
+                  },
+                  40
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/DateTime",
+                    "lib/uuid": "173ada28-6b0c-4228-b9d7-525e911c2fd4",
+                    "effective-type": "type/DateTime"
+                  },
+                  39
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Boolean",
+                    "lib/uuid": "d16daab0-c887-4d9f-9939-1523c7e8a5ef",
+                    "effective-type": "type/Boolean"
+                  },
+                  38
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/Boolean",
+                    "lib/uuid": "13376898-e953-40bd-8959-e7590c1a7537",
+                    "effective-type": "type/Boolean"
+                  },
+                  42
+                ]
+              ],
+              "source-table": 6,
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "lib/uuid": "6f4271c3-116b-458b-9fb2-cd805b99f6aa"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "5e772adf-452d-4a92-9cd5-10207c7af2e5",
+                      "effective-type": "type/DateTime"
+                    },
+                    31
+                  ],
+                  -12,
+                  "month"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 23,
+        "legacy_query": "{\"database\":1,\"query\":{\"fields\":[[\"field\",24,{\"base-type\":\"type/BigInteger\"}],[\"field\",37,{\"base-type\":\"type/Text\"}],[\"field\",36,{\"base-type\":\"type/Text\"}],[\"field\",43,{\"base-type\":\"type/Text\"}],[\"field\",41,{\"base-type\":\"type/Text\"}],[\"field\",31,{\"base-type\":\"type/DateTime\"}],[\"field\",40,{\"base-type\":\"type/DateTime\"}],[\"field\",39,{\"base-type\":\"type/DateTime\"}],[\"field\",38,{\"base-type\":\"type/Boolean\"}],[\"field\",42,{\"base-type\":\"type/Boolean\"}]],\"filter\":[\"time-interval\",[\"field\",31,{\"base-type\":\"type/DateTime\"}],-12,\"month\"],\"order-by\":[[\"desc\",[\"field\",31,{\"base-type\":\"type/DateTime\"}]]],\"source-table\":6},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "object",
+        "archived_directly": false,
+        "entity_id": "AXDOILGSNqoWoxV1NuvTt",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.columns": [
+            {
+              "enabled": true,
+              "name": "ID"
+            },
+            {
+              "enabled": true,
+              "name": "FIRST_NAME"
+            },
+            {
+              "enabled": true,
+              "name": "LAST_NAME"
+            },
+            {
+              "enabled": true,
+              "name": "PLAN"
+            },
+            {
+              "enabled": false,
+              "name": "SOURCE"
+            },
+            {
+              "enabled": true,
+              "name": "CREATED_AT"
+            },
+            {
+              "enabled": true,
+              "name": "TRIAL_ENDS_AT"
+            },
+            {
+              "enabled": true,
+              "name": "CANCELED_AT"
+            },
+            {
+              "enabled": false,
+              "name": "TRIAL_CONVERTED"
+            },
+            {
+              "enabled": false,
+              "name": "ACTIVE_SUBSCRIPTION"
+            }
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 14,
+      "id": 28,
+      "parameter_mappings": [
+        {
+          "card_id": 23,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              31,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 23,
+      "entity_id": "R6UJhgRJd678v2nvAioH_",
+      "visualization_settings": {},
+      "size_y": 6,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 16
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": "Compares the orders of each category quarter over quarter",
+        "archived": false,
+        "view_count": 0,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": 2,
+        "result_metadata": [
+          {
+            "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+            "semantic_type": "type/Category",
+            "coercion_strategy": null,
+            "name": "CATEGORY",
+            "settings": null,
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            "effective_type": "type/Text",
+            "id": 18,
+            "visibility_type": "normal",
+            "display_name": "Product → Category",
+            "base_type": "type/Text"
+          },
+          {
+            "description": "The date and time an order was submitted.",
+            "semantic_type": "type/CreationTimestamp",
+            "coercion_strategy": null,
+            "unit": "quarter",
+            "name": "CREATED_AT",
+            "settings": {
+              "time_enabled": "milliseconds"
+            },
+            "fk_target_field_id": null,
+            "field_ref": [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter",
+                "original-temporal-unit": "month"
+              }
+            ],
+            "effective_type": "type/DateTime",
+            "id": 13,
+            "visibility_type": "normal",
+            "display_name": "Created At: Quarter",
+            "base_type": "type/DateTime"
+          },
+          {
+            "base_type": "type/BigInteger",
+            "display_name": "Count",
+            "effective_type": "type/BigInteger",
+            "field_ref": [
+              "aggregation",
+              0
+            ],
+            "name": "count",
+            "semantic_type": "type/Quantity"
+          }
+        ],
+        "embedding_type": null,
+        "initially_published_at": null,
+        "can_write": true,
+        "card_schema": 23,
+        "database_id": 1,
+        "enable_embedding": false,
+        "collection_id": 2,
+        "query_type": "query",
+        "download_perms": "full",
+        "name": "Orders by product category",
+        "public_uuid_prefix": null,
+        "document_id": null,
+        "last_used_at": "2025-10-03T12:30:24.650407Z",
+        "type": "question",
+        "dimensions": null,
+        "query_average_duration": null,
+        "creator_id": 13371338,
+        "moderation_reviews": [],
+        "updated_at": "2025-10-03T12:30:24.650407Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "lib/type": "mbql/query",
+          "stages": [
+            {
+              "lib/type": "mbql.stage/mbql",
+              "aggregation": [
+                [
+                  "metric",
+                  {
+                    "lib/uuid": "a4815c49-4fba-45b1-b1ed-006c87b1c8bd"
+                  },
+                  19
+                ]
+              ],
+              "breakout": [
+                [
+                  "field",
+                  {
+                    "base-type": "type/Text",
+                    "source-field": 14,
+                    "lib/uuid": "f8f256fc-3572-468a-ae5b-543c765a8031",
+                    "effective-type": "type/Text"
+                  },
+                  18
+                ],
+                [
+                  "field",
+                  {
+                    "temporal-unit": "quarter",
+                    "base-type": "type/DateTime",
+                    "original-temporal-unit": "month",
+                    "lib/uuid": "2c2145fd-8c5c-46c1-aa22-166c630e5ce9",
+                    "effective-type": "type/DateTime"
+                  },
+                  13
+                ]
+              ],
+              "source-table": 2,
+              "filters": [
+                [
+                  "time-interval",
+                  {
+                    "include-current": true,
+                    "lib/uuid": "966ad7e6-5699-49c7-b56d-7116db2501bc"
+                  },
+                  [
+                    "field",
+                    {
+                      "base-type": "type/DateTime",
+                      "lib/uuid": "3f1c4c88-0a0a-4f86-a39f-61d1e5153473",
+                      "effective-type": "type/DateTime"
+                    },
+                    13
+                  ],
+                  -2,
+                  "year"
+                ]
+              ]
+            }
+          ],
+          "database": 1
+        },
+        "dimension_mappings": null,
+        "id": 24,
+        "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",19]],\"breakout\":[[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}],[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\",\"original-temporal-unit\":\"month\"}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-2,\"year\",{\"include-current\":true}],\"source-table\":2},\"type\":\"query\"}",
+        "parameter_mappings": [],
+        "display": "line",
+        "archived_directly": false,
+        "entity_id": "kgAiQ87dLKJmTnOaTeVsc",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.show_goal": true,
+          "graph.show_trendline": false,
+          "graph.y_axis.title_text": "",
+          "graph.show_values": true,
+          "graph.x_axis.title_text": "",
+          "graph.goal_value": 500,
+          "graph.metrics": [
+            "count"
+          ],
+          "graph.label_value_formatting": "compact",
+          "series_settings": {
+            "Doohickey": {
+              "color": "#7172AD",
+              "display": "area",
+              "line.interpolate": "cardinal",
+              "line.size": "M",
+              "line.style": "solid"
+            },
+            "Gadget": {
+              "color": "#A989C5",
+              "line.size": "M"
+            },
+            "Gizmo": {
+              "color": "#C7EAEA",
+              "line.size": "M",
+              "line.style": "solid"
+            },
+            "Widget": {
+              "color": "#227FD2",
+              "line.size": "M"
+            }
+          },
+          "graph.dimensions": [
+            "CREATED_AT",
+            "CATEGORY"
+          ]
+        },
+        "metabase_version": null,
+        "parameters": [],
+        "dashboard_id": null,
+        "created_at": "2025-10-03T12:30:24.650407Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 2,
+      "parameter_mappings": [
+        {
+          "card_id": 24,
+          "parameter_id": "1ebab259",
+          "target": [
+            "dimension",
+            [
+              "field",
+              34,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 24,
+          "parameter_id": "81cd957",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 24,
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "dimension",
+            [
+              "field",
+              18,
+              {
+                "base-type": "type/Text",
+                "source-field": 14
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "card_id": 24,
+          "parameter_id": "efd919c7",
+          "target": [
+            "dimension",
+            [
+              "field",
+              13,
+              {
+                "base-type": "type/DateTime",
+                "temporal-unit": "quarter"
+              }
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 24,
+      "entity_id": "AmK0nHFFIARIPCWx7RHj8",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 19
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 33,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "Rq9NMjA_Y28ZDB-nwO8vI",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Appendix",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "heading",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 23
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 32,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "OlrrrzZShIqvGE6RAjqbr",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Find more guides and tutorials on Metabase, analytics, data modeling, and more at [Metabase Learn](https://www.metabase.com/learn/)\n\n",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "text",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 24
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 31,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "sCNcFfp3EeaizKg0VtW4e",
+      "visualization_settings": {
+        "iframe": "https://www.youtube.com/watch?v=dnT2Xj52mnk",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "iframe",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 10,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 25
+    },
+    {
+      "size_x": 10,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 14,
+      "id": 29,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "ZuOmZNE78gKe16jyqSRX4",
+      "visualization_settings": {
+        "link": {
+          "entity": {
+            "model": "card",
+            "id": 25,
+            "name": "All subscriptions in table view",
+            "description": "More complete look at all recent subscriptions",
+            "collection_id": 2,
+            "display": "table",
+            "db_id": null
+          }
+        },
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "link",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 22
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 24,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "DTpP8-129mKPp9oxsq_4R",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Take a look into our customer funnel and website performance",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "text",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 1
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 3,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 23,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "K2tgkIzRB0_cSP8jrVZ6p",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Website Analysis",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "heading",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 0
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 21,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "MS4_Du2Fd3qkjpaRZFOqm",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Super important customer ratings for our products",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "text",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 25
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 20,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "YyZMLS7IGhXda6vmEfJ4I",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Customer Satisfaction",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "heading",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 24
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 18,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "f-Hf9bL9_oArQCg-kLSdY",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Widget and Gizmo are our leading products, generating the most revenue and orders",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "text",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 11
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 17,
+      "parameter_mappings": [
+        {
+          "parameter_id": "9d9cddd4",
+          "target": [
+            "text-tag",
+            "product_category"
+          ]
+        }
+      ],
+      "card_id": null,
+      "entity_id": "NZSFQPtNkT7fLZeeW9Oo0",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Find below a breakdown of products and their performance, filtered now for {{product_category}}",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "text",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 1
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 16,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "WD8BNj-NyWXaWuFghZNDU",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Business KPIs _look strong_ based on the consistent MoM revenue growth following the growth in the number of orders",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "text",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 1
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 2,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 14,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "wYtzbytCKhibM8Zg9s4VP",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Top Performing Products",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "heading",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 0
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 11,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "zsygIGYHdnaVsoFLgitCe",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Deeper Dive",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "heading",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 10
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": 1,
+      "series": [],
+      "inline_parameters": null,
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null,
+        "download_perms": "none"
+      },
+      "updated_at": "2025-10-03T12:30:24.650407Z",
+      "col": 0,
+      "id": 7,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "8_qdLmnHn3tGOaDdbLTwn",
+      "visualization_settings": {
+        "dashcard.background": false,
+        "text": "Overall Business Health",
+        "virtual_card": {
+          "archived": false,
+          "dataset_query": {},
+          "display": "heading",
+          "name": null,
+          "visualization_settings": {}
+        }
+      },
+      "size_y": 1,
+      "dashboard_id": 1,
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "row": 0
+    }
+  ],
+  "embedding_type": null,
+  "initially_published_at": null,
+  "can_write": true,
+  "can_set_cache_policy": true,
+  "tabs": [
+    {
+      "id": 1,
+      "dashboard_id": 1,
+      "name": "Overview",
+      "position": 0,
+      "entity_id": "UaPZl7PULaGoAGquao9XS",
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "updated_at": "2025-10-03T12:30:24.650407Z"
+    },
+    {
+      "id": 2,
+      "dashboard_id": 1,
+      "name": "Portfolio Performance",
+      "position": 1,
+      "entity_id": "N-o1tJ9swdO4YJycqMA8P",
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "updated_at": "2025-10-03T12:30:24.650407Z"
+    },
+    {
+      "id": 3,
+      "dashboard_id": 1,
+      "name": "Website Analysis",
+      "position": 2,
+      "entity_id": "dJjVk7QtJaNp6panPlnH5",
+      "created_at": "2025-10-03T12:30:24.650407Z",
+      "updated_at": "2025-10-03T12:30:24.650407Z"
+    }
+  ],
+  "enable_embedding": false,
+  "collection_id": 2,
+  "show_in_getting_started": false,
+  "name": "E-commerce Insights",
+  "is_remote_synced": false,
+  "width": "fixed",
+  "public_uuid_prefix": null,
+  "caveats": null,
+  "collection_authority_level": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "last_used_param_values": {},
+  "id": 1,
+  "last_viewed_at": "2025-10-03T12:30:24.650407Z",
+  "position": null,
+  "archived_directly": false,
+  "entity_id": "xBLdW9FsgRuB2HGhWiBa_",
+  "param_fields": {
+    "81cd957": [
+      {
+        "semantic_type": "type/CreationTimestamp",
+        "table_id": 6,
+        "name": "CREATED_AT",
+        "has_field_values": "none",
+        "fk_target_field_id": null,
+        "dimensions": [],
+        "id": 31,
+        "target": null,
+        "display_name": "Created At",
+        "name_field": null,
+        "base_type": "type/DateTime"
+      },
+      {
+        "semantic_type": "type/CreationTimestamp",
+        "table_id": 2,
+        "name": "CREATED_AT",
+        "has_field_values": "none",
+        "fk_target_field_id": null,
+        "dimensions": [],
+        "id": 13,
+        "target": null,
+        "display_name": "Created At",
+        "name_field": null,
+        "base_type": "type/DateTime"
+      },
+      {
+        "semantic_type": null,
+        "table_id": 7,
+        "name": "TIMESTAMP",
+        "has_field_values": "none",
+        "fk_target_field_id": null,
+        "dimensions": [],
+        "id": 35,
+        "target": null,
+        "display_name": "Timestamp",
+        "name_field": null,
+        "base_type": "type/DateTime"
+      }
+    ],
+    "1ebab259": [
+      {
+        "semantic_type": "type/Company",
+        "table_id": 3,
+        "name": "VENDOR",
+        "has_field_values": "list",
+        "fk_target_field_id": null,
+        "dimensions": [],
+        "id": 34,
+        "target": null,
+        "display_name": "Vendor",
+        "name_field": null,
+        "base_type": "type/Text"
+      }
+    ],
+    "9d9cddd4": [
+      {
+        "semantic_type": "type/Category",
+        "table_id": 3,
+        "name": "CATEGORY",
+        "has_field_values": "list",
+        "fk_target_field_id": null,
+        "dimensions": [],
+        "id": 18,
+        "target": null,
+        "display_name": "Category",
+        "name_field": null,
+        "base_type": "type/Text"
+      }
+    ],
+    "efd919c7": [
+      {
+        "semantic_type": "type/CreationTimestamp",
+        "table_id": 2,
+        "name": "CREATED_AT",
+        "has_field_values": "none",
+        "fk_target_field_id": null,
+        "dimensions": [],
+        "id": 13,
+        "target": null,
+        "display_name": "Created At",
+        "name_field": null,
+        "base_type": "type/DateTime"
+      }
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "effective_location": "/",
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "parameters": [
+    {
+      "id": "81cd957",
+      "name": "Date Range",
+      "required": false,
+      "sectionId": "date",
+      "slug": "date_range",
+      "type": "date/all-options"
+    },
+    {
+      "id": "efd919c7",
+      "name": "Date Grouping",
+      "sectionId": "temporal-unit",
+      "slug": "date_grouping",
+      "type": "temporal-unit"
+    },
+    {
+      "default": [
+        "Doohickey",
+        "Gizmo",
+        "Gadget",
+        "Widget"
+      ],
+      "id": "9d9cddd4",
+      "name": "Product Category",
+      "required": true,
+      "sectionId": "string",
+      "slug": "product_category",
+      "type": "string/="
+    },
+    {
+      "id": "1ebab259",
+      "isMultiSelect": false,
+      "name": "Vendor",
+      "sectionId": "string",
+      "slug": "vendor",
+      "type": "string/="
+    }
+  ],
+  "auto_apply_filters": true,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "public_uuid": null,
+  "points_of_interest": null,
+  "can_delete": false
+}

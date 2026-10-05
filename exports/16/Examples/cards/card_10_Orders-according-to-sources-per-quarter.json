@@ -1,0 +1,230 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Orders placed per quarter broken down by source and formatted to highlight best and worst quarters",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "description": "The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter",
+      "semantic_type": null,
+      "coercion_strategy": null,
+      "name": "SOURCE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "expression",
+        "pivot-grouping"
+      ],
+      "effective_type": "type/Text",
+      "id": 30,
+      "visibility_type": "normal",
+      "display_name": "pivot-grouping",
+      "base_type": "type/Integer"
+    },
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/Currency",
+      "coercion_strategy": null,
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Sum of Total",
+      "base_type": "type/Float"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Orders according to sources per quarter",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "metric",
+            {
+              "lib/uuid": "e3524fbc-b23d-46c3-b929-ae799d5b956d"
+            },
+            9
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 11,
+              "lib/uuid": "b5092d9d-4beb-45ec-b5f6-3772bb897189",
+              "effective-type": "type/Text"
+            },
+            30
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "quarter",
+              "lib/uuid": "a2fec0ef-f2c8-44ea-a027-f5d87a6ff994",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "include-current": true,
+              "lib/uuid": "256b5dd0-6847-4f1b-a5dc-2ba1f292aa5d"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "46c3bb36-fd98-42b4-a796-2a86e15fc112",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            -2,
+            "year"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 10,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9]],\"breakout\":[[\"field\",30,{\"base-type\":\"type/Text\",\"source-field\":11}],[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-2,\"year\",{\"include-current\":true}],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "pivot",
+  "archived_directly": false,
+  "entity_id": "km2d9-ZqHrlAM79yPh13G",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "pivot_table.column_split": {
+      "columns": [
+        "SOURCE"
+      ],
+      "rows": [
+        "CREATED_AT"
+      ],
+      "values": [
+        "sum"
+      ]
+    },
+    "pivot_table.column_widths": {
+      "leftHeaderWidths": [
+        135
+      ],
+      "totalLeftHeaderWidths": 135,
+      "valueHeaderWidths": {
+        "0": 148,
+        "1": 158,
+        "2": 159,
+        "3": 144,
+        "4": 139,
+        "5": 124
+      }
+    },
+    "table.column_formatting": [
+      {
+        "max_value": 100,
+        "color": "#509EE3",
+        "columns": [
+          "sum"
+        ],
+        "value": "",
+        "type": "range",
+        "colors": [
+          "white",
+          "#A7D07C"
+        ],
+        "highlight_row": false,
+        "min_value": 0,
+        "min_type": null,
+        "id": 0,
+        "operator": "=",
+        "max_type": null
+      }
+    ],
+    "column_settings": {
+      "[\"name\",\"CREATED_AT\"]": {
+        "column_title": "Date"
+      }
+    }
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

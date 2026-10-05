@@ -1,0 +1,464 @@
+{
+  "cache_invalidated_at": null,
+  "description": "More complete look at all recent subscriptions",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 6,
+  "result_metadata": [
+    {
+      "description": null,
+      "semantic_type": "type/PK",
+      "coercion_strategy": null,
+      "name": "ID",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        24,
+        {
+          "base-type": "type/BigInteger"
+        }
+      ],
+      "effective_type": "type/BigInteger",
+      "id": 24,
+      "visibility_type": "normal",
+      "display_name": "ID",
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Name",
+      "coercion_strategy": null,
+      "name": "FIRST_NAME",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        37,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 37,
+      "visibility_type": "normal",
+      "display_name": "First Name",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Name",
+      "coercion_strategy": null,
+      "name": "LAST_NAME",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        36,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 36,
+      "visibility_type": "normal",
+      "display_name": "Last Name",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "PLAN",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        43,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 43,
+      "visibility_type": "normal",
+      "display_name": "Plan",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Source",
+      "coercion_strategy": null,
+      "name": "SOURCE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        41,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 41,
+      "visibility_type": "normal",
+      "display_name": "Source",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "name": "CREATED_AT",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        31,
+        {
+          "base-type": "type/DateTime"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 31,
+      "visibility_type": "normal",
+      "display_name": "Created At",
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": null,
+      "semantic_type": null,
+      "coercion_strategy": null,
+      "name": "TRIAL_ENDS_AT",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        40,
+        {
+          "base-type": "type/DateTime"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 40,
+      "visibility_type": "normal",
+      "display_name": "Trial Ends At",
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/CancelationTimestamp",
+      "coercion_strategy": null,
+      "name": "CANCELED_AT",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        39,
+        {
+          "base-type": "type/DateTime"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 39,
+      "visibility_type": "normal",
+      "display_name": "Canceled At",
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "TRIAL_CONVERTED",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        38,
+        {
+          "base-type": "type/Boolean"
+        }
+      ],
+      "effective_type": "type/Boolean",
+      "id": 38,
+      "visibility_type": "normal",
+      "display_name": "Trial Converted",
+      "base_type": "type/Boolean"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "ACTIVE_SUBSCRIPTION",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        42,
+        {
+          "base-type": "type/Boolean"
+        }
+      ],
+      "effective_type": "type/Boolean",
+      "id": 42,
+      "visibility_type": "normal",
+      "display_name": "Active Subscription",
+      "base_type": "type/Boolean"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "All subscriptions in table view",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "order-by": [
+          [
+            "desc",
+            {
+              "lib/uuid": "ce396095-3a02-491f-8cfb-1c72f09a4bfc"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "b80027be-03bc-445a-94d4-7186264b0756",
+                "effective-type": "type/DateTime"
+              },
+              31
+            ]
+          ]
+        ],
+        "fields": [
+          [
+            "field",
+            {
+              "base-type": "type/BigInteger",
+              "lib/uuid": "f966ffcf-6389-4493-9d2f-6952531c50f3",
+              "effective-type": "type/BigInteger"
+            },
+            24
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "aa84dad1-a7e3-4e62-b7fb-cab5709bc3ca",
+              "effective-type": "type/Text"
+            },
+            37
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "0e9af8b2-9da7-466c-a8c3-c82bcbbcfb15",
+              "effective-type": "type/Text"
+            },
+            36
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "fa7a0a3a-dd7e-433a-919f-6e8410039fe8",
+              "effective-type": "type/Text"
+            },
+            43
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "4de0ac65-b225-40d2-a58a-9991d390007e",
+              "effective-type": "type/Text"
+            },
+            41
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "lib/uuid": "1b4f39a6-a0ec-4e49-aa75-c6c343d98435",
+              "effective-type": "type/DateTime"
+            },
+            31
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "lib/uuid": "70de87af-b26f-454f-b22a-3e4ef911df37",
+              "effective-type": "type/DateTime"
+            },
+            40
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "lib/uuid": "cb063e56-d482-45f5-8e4f-6889257f8c45",
+              "effective-type": "type/DateTime"
+            },
+            39
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Boolean",
+              "lib/uuid": "f38b6c4c-4761-4dbe-90cb-f750e2f5d844",
+              "effective-type": "type/Boolean"
+            },
+            38
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Boolean",
+              "lib/uuid": "b7fc9231-c4cb-4f77-982d-55173dc76a25",
+              "effective-type": "type/Boolean"
+            },
+            42
+          ]
+        ],
+        "source-table": 6,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "lib/uuid": "a709c2ef-5841-4766-9c11-52b9ae25e298"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "f3ca25d8-30f6-42e7-9cae-8227ed7b9926",
+                "effective-type": "type/DateTime"
+              },
+              31
+            ],
+            -12,
+            "month"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 25,
+  "legacy_query": "{\"database\":1,\"query\":{\"fields\":[[\"field\",24,{\"base-type\":\"type/BigInteger\"}],[\"field\",37,{\"base-type\":\"type/Text\"}],[\"field\",36,{\"base-type\":\"type/Text\"}],[\"field\",43,{\"base-type\":\"type/Text\"}],[\"field\",41,{\"base-type\":\"type/Text\"}],[\"field\",31,{\"base-type\":\"type/DateTime\"}],[\"field\",40,{\"base-type\":\"type/DateTime\"}],[\"field\",39,{\"base-type\":\"type/DateTime\"}],[\"field\",38,{\"base-type\":\"type/Boolean\"}],[\"field\",42,{\"base-type\":\"type/Boolean\"}]],\"filter\":[\"time-interval\",[\"field\",31,{\"base-type\":\"type/DateTime\"}],-12,\"month\"],\"order-by\":[[\"desc\",[\"field\",31,{\"base-type\":\"type/DateTime\"}]]],\"source-table\":6},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "table",
+  "archived_directly": false,
+  "entity_id": "ucI5e9_FdTQF-1i7RdtIX",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "table.cell_column": "ACTIVE_SUBSCRIPTION",
+    "table.columns": [
+      {
+        "enabled": true,
+        "name": "ID"
+      },
+      {
+        "enabled": true,
+        "name": "FIRST_NAME"
+      },
+      {
+        "enabled": true,
+        "name": "LAST_NAME"
+      },
+      {
+        "enabled": true,
+        "name": "PLAN"
+      },
+      {
+        "enabled": false,
+        "name": "SOURCE"
+      },
+      {
+        "enabled": true,
+        "name": "CREATED_AT"
+      },
+      {
+        "enabled": true,
+        "name": "TRIAL_ENDS_AT"
+      },
+      {
+        "enabled": true,
+        "name": "CANCELED_AT"
+      },
+      {
+        "enabled": false,
+        "name": "TRIAL_CONVERTED"
+      },
+      {
+        "enabled": false,
+        "name": "ACTIVE_SUBSCRIPTION"
+      }
+    ],
+    "table.pivot_column": "CANCELED_AT"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

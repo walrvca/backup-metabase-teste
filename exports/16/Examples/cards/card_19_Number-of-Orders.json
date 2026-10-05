@@ -1,0 +1,174 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Canonical metric for number of orders placed",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "unit": "month",
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        13,
+        {
+          "base-type": "type/DateTime",
+          "temporal-unit": "month"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Created At: Month",
+      "base_type": "type/DateTime"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Number of Orders",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "metric",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "query_description": "Orders, Contagem, Agrupados por Created At: Mês, Filtrado por Created At está no anos anteriores 3 ou este ano",
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "72819db9-30f9-4ce3-afee-32b458d380fa"
+            }
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "month",
+              "lib/uuid": "f044ab6a-1ea8-4f28-8391-61a08382f557",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "include-current": true,
+              "lib/uuid": "4902051d-baec-4123-8734-bc2c7b4d4338"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "b075907c-954a-4f33-bd4e-91cbb9c88303",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            -3,
+            "year"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 19,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"month\"}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-3,\"year\",{\"include-current\":true}],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "line",
+  "archived_directly": false,
+  "entity_id": "8EdazRgPwfxdiltp7NCjS",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.dimensions": [
+      "CREATED_AT"
+    ],
+    "graph.metrics": [
+      "count"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

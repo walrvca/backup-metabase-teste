@@ -1,0 +1,236 @@
+{
+  "cache_invalidated_at": null,
+  "description": null,
+  "archived": false,
+  "view_count": 4,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "description": "The name of the user who owns an account",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Name",
+      "table_id": 1,
+      "lib/deduplicated-name": "NAME",
+      "lib/original-name": "NAME",
+      "lib/breakout?": true,
+      "name": "NAME",
+      "lib/source": "source/joins",
+      "lib/source-column-alias": "NAME",
+      "lib/original-display-name": "Name",
+      "source": "breakout",
+      "lib/original-join-alias": "People",
+      "field_ref": [
+        "field",
+        48,
+        {
+          "join-alias": "People"
+        }
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 48,
+      "metabase.lib.query/transformation-added-base-type": true,
+      "lib/desired-column-alias": "People__NAME",
+      "position": 4,
+      "visibility_type": "normal",
+      "display_name": "People → Name",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2499,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 13.532
+          }
+        }
+      },
+      "base_type": "type/Text",
+      "source_alias": "People",
+      "metabase.lib.join/join-alias": "People"
+    },
+    {
+      "semantic_type": "type/Name",
+      "lib/deduplicated-name": "sum",
+      "lib/original-name": "sum",
+      "name": "sum",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "sum",
+      "source": "aggregation",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/Text",
+      "lib/desired-column-alias": "sum",
+      "display_name": "Soma de Last Name",
+      "base_type": "type/Text"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 2,
+    "first_name": "mcp",
+    "last_name": "",
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "common_name": "mcp"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 5,
+  "query_type": "query",
+  "name": "Total de vendas por pessoa",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T15:03:11.109251Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 2,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T15:03:11.109251Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "join-alias": "People",
+              "lib/uuid": "f863ce7d-45b6-4a30-af8e-4b82f89c69b5",
+              "lib/transformation-added-base-type": true,
+              "base-type": "type/Text",
+              "effective-type": "type/Text"
+            },
+            48
+          ]
+        ],
+        "source-table": 2,
+        "joins": [
+          {
+            "fields": "all",
+            "alias": "People",
+            "conditions": [
+              [
+                "=",
+                {
+                  "lib/uuid": "c7a6d03d-3bc4-48f6-8bdc-23c3b109d1e8"
+                },
+                [
+                  "field",
+                  {
+                    "lib/uuid": "cf502815-3a57-4507-be0e-f530d33e5a86",
+                    "lib/transformation-added-base-type": true,
+                    "base-type": "type/BigInteger",
+                    "effective-type": "type/BigInteger"
+                  },
+                  4
+                ],
+                [
+                  "field",
+                  {
+                    "join-alias": "People",
+                    "lib/uuid": "42eb78f9-d718-479c-878b-12401dff1d10",
+                    "lib/transformation-added-base-type": true,
+                    "base-type": "type/Text",
+                    "effective-type": "type/Text"
+                  },
+                  48
+                ]
+              ]
+            ],
+            "lib/type": "mbql/join",
+            "stages": [
+              {
+                "lib/type": "mbql.stage/mbql",
+                "source-table": 1
+              }
+            ]
+          }
+        ],
+        "aggregation": [
+          [
+            "sum",
+            {
+              "lib/uuid": "1d242c01-fed1-48f8-8ecd-22eba2b5ea60"
+            },
+            [
+              "field",
+              {
+                "lib/uuid": "0cd3ad66-898a-4b64-8ac2-9cdff1b9bf4b",
+                "lib/transformation-added-base-type": true,
+                "base-type": "type/Text",
+                "effective-type": "type/Text"
+              },
+              36
+            ]
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 41,
+  "legacy_query": "{\"query\":{\"source-table\":2,\"joins\":[{\"alias\":\"People\",\"source-table\":1,\"fields\":\"all\",\"condition\":[\"=\",[\"field\",4,null],[\"field\",48,{\"join-alias\":\"People\"}]]}],\"breakout\":[[\"field\",48,{\"join-alias\":\"People\"}]],\"aggregation\":[[\"sum\",[\"field\",36,null]]]},\"type\":\"query\",\"database\":1}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "table",
+  "archived_directly": false,
+  "entity_id": "DVwJY4Qa9g1FE7BDNV8gu",
+  "param_fields": {},
+  "collection_preview": true,
+  "last-edit-info": {
+    "id": 2,
+    "email": "api-key-user-4c304753-86af-47f6-92fb-36a37c1845dd@api-key.invalid",
+    "first_name": "mcp",
+    "last_name": "",
+    "timestamp": "2025-10-03T15:03:11.123074Z"
+  },
+  "visualization_settings": {},
+  "collection": {
+    "authority_level": null,
+    "description": null,
+    "archived": false,
+    "slug": "sample1",
+    "archive_operation_id": null,
+    "name": "SAMPLE1",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": false,
+    "id": 5,
+    "archived_directly": null,
+    "entity_id": "QIy7orCg6TivB07a0X2iy",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T14:58:20.780932Z"
+  },
+  "metabase_version": "v0.56.8 (da08112)",
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T15:03:11.109251Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

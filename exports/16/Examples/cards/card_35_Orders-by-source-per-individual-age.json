@@ -1,0 +1,216 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Shows a distribution of orders broken down by source across our customers' individual age values",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": 1,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "base_type": "type/BigInteger",
+      "description": "Age of the customer in years.",
+      "display_name": "Age",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "field",
+        "Age",
+        {
+          "base-type": "type/BigInteger"
+        }
+      ],
+      "name": "Age",
+      "semantic_type": "type/Quantity"
+    },
+    {
+      "description": "The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter",
+      "semantic_type": "type/Source",
+      "coercion_strategy": null,
+      "name": "SOURCE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        30,
+        {
+          "base-type": "type/Text",
+          "source-field": 11
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 30,
+      "visibility_type": "normal",
+      "display_name": "User → Source",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Orders by source per individual age",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "joins": [
+          {
+            "alias": "Products",
+            "strategy": "left-join",
+            "conditions": [
+              [
+                "=",
+                {
+                  "lib/uuid": "61cf23f5-2752-41b4-8270-aa962faf247c"
+                },
+                [
+                  "field",
+                  {
+                    "base-type": "type/Integer",
+                    "lib/uuid": "0eb743d2-fff6-42e7-9e04-39b0efa62976"
+                  },
+                  "PRODUCT_ID"
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/BigInteger",
+                    "join-alias": "Products",
+                    "lib/uuid": "be612322-ce6e-4d82-89aa-5c2c08e7d8d1",
+                    "effective-type": "type/BigInteger"
+                  },
+                  8
+                ]
+              ]
+            ],
+            "lib/type": "mbql/join",
+            "stages": [
+              {
+                "lib/type": "mbql.stage/mbql",
+                "source-table": 3
+              }
+            ]
+          }
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "f4f7b607-016d-4040-8d4c-04dbe928cab2"
+            }
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/BigInteger",
+              "lib/uuid": "92b5df27-a124-438f-832b-830c1bc48805"
+            },
+            "Age"
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 11,
+              "lib/uuid": "62159f21-8046-4305-b943-1c719754d683",
+              "effective-type": "type/Text"
+            },
+            30
+          ]
+        ],
+        "source-card": 1
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 35,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",\"Age\",{\"base-type\":\"type/BigInteger\"}],[\"field\",30,{\"base-type\":\"type/Text\",\"source-field\":11}]],\"joins\":[{\"alias\":\"Products\",\"condition\":[\"=\",[\"field\",\"PRODUCT_ID\",{\"base-type\":\"type/Integer\"}],[\"field\",8,{\"base-type\":\"type/BigInteger\",\"join-alias\":\"Products\"}]],\"source-table\":3,\"strategy\":\"left-join\"}],\"source-table\":\"card__1\"},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "bar",
+  "archived_directly": false,
+  "entity_id": "8MovkFBA00WFOq2v5BzfB",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.dimensions": [
+      "Age",
+      "SOURCE"
+    ],
+    "graph.show_values": true,
+    "graph.x_axis.scale": "linear",
+    "stackable.stack_type": "normalized",
+    "graph.metrics": [
+      "count"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

@@ -1,0 +1,460 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Sample orders joined with products",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": 1,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "description": "This is a unique ID for the product. It is also called the “Invoice number” or “Confirmation number” in customer facing emails and screens.",
+      "semantic_type": "type/PK",
+      "coercion_strategy": null,
+      "name": "ID",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        9,
+        null
+      ],
+      "effective_type": "type/BigInteger",
+      "id": 9,
+      "visibility_type": "normal",
+      "display_name": "ID",
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": "The id of the user who made this order. Note that in some cases where an order was created on behalf of a customer who phoned the order in, this might be the employee who handled the request.",
+      "semantic_type": "type/FK",
+      "coercion_strategy": null,
+      "name": "USER_ID",
+      "settings": null,
+      "fk_target_field_id": 4,
+      "field_ref": [
+        "field",
+        11,
+        null
+      ],
+      "effective_type": "type/Integer",
+      "id": 11,
+      "visibility_type": "normal",
+      "display_name": "User ID",
+      "base_type": "type/Integer"
+    },
+    {
+      "description": "The product ID. This is an internal identifier for the product, NOT the SKU.",
+      "semantic_type": "type/FK",
+      "coercion_strategy": null,
+      "name": "PRODUCT_ID",
+      "settings": null,
+      "fk_target_field_id": 8,
+      "field_ref": [
+        "field",
+        14,
+        null
+      ],
+      "effective_type": "type/Integer",
+      "id": 14,
+      "visibility_type": "normal",
+      "display_name": "Product ID",
+      "base_type": "type/Integer"
+    },
+    {
+      "description": "The raw, pre-tax cost of the order. Note that this might be different in the future from the product price due to promotions, credits, etc.",
+      "semantic_type": "type/Currency",
+      "coercion_strategy": null,
+      "name": "SUBTOTAL",
+      "settings": {
+        "view_as": null
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        10,
+        null
+      ],
+      "effective_type": "type/Float",
+      "id": 10,
+      "visibility_type": "normal",
+      "display_name": "Subtotal",
+      "base_type": "type/Float"
+    },
+    {
+      "description": "This is the amount of local and federal taxes that are collected on the purchase. Note that other governmental fees on some products are not included here, but instead are accounted for in the subtotal.",
+      "semantic_type": "type/Currency",
+      "coercion_strategy": null,
+      "name": "TAX",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        6,
+        null
+      ],
+      "effective_type": "type/Float",
+      "id": 6,
+      "visibility_type": "normal",
+      "display_name": "Tax",
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The total billed amount.",
+      "semantic_type": "type/Currency",
+      "coercion_strategy": null,
+      "name": "TOTAL",
+      "settings": {
+        "currency": "USD"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        5,
+        null
+      ],
+      "effective_type": "type/Float",
+      "id": 5,
+      "visibility_type": "normal",
+      "display_name": "Total",
+      "base_type": "type/Float"
+    },
+    {
+      "description": "Discount amount.",
+      "semantic_type": "type/Discount",
+      "coercion_strategy": null,
+      "name": "DISCOUNT",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        3,
+        null
+      ],
+      "effective_type": "type/Float",
+      "id": 3,
+      "visibility_type": "normal",
+      "display_name": "Discount",
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        13,
+        null
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Created At",
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": "Number of products bought.",
+      "semantic_type": "type/Quantity",
+      "coercion_strategy": null,
+      "name": "QUANTITY",
+      "settings": {
+        "show_mini_bar": false
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        2,
+        null
+      ],
+      "effective_type": "type/Integer",
+      "id": 2,
+      "visibility_type": "normal",
+      "display_name": "Quantity",
+      "base_type": "type/Integer"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "description": "Age of the customer in years.",
+      "display_name": "Age",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "field",
+        "Age",
+        {
+          "base-type": "type/BigInteger"
+        }
+      ],
+      "name": "Age",
+      "semantic_type": "type/Quantity"
+    },
+    {
+      "description": "The contact email for the account.",
+      "semantic_type": "type/Email",
+      "coercion_strategy": null,
+      "name": "EMAIL",
+      "settings": {
+        "link_text": ""
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        7,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 7,
+      "visibility_type": "normal",
+      "display_name": "Customer Email",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The state or province of the account’s billing address.",
+      "semantic_type": "type/State",
+      "coercion_strategy": null,
+      "name": "STATE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        1,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 1,
+      "visibility_type": "normal",
+      "display_name": "State",
+      "base_type": "type/Text"
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Orders + People",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "model",
+  "dimensions": null,
+  "persisted": false,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "joins": [
+          {
+            "alias": "People - User",
+            "fields": [
+              [
+                "field",
+                {
+                  "base-type": "type/Text",
+                  "join-alias": "People - User",
+                  "lib/uuid": "fed4e85f-f828-445e-991a-f8ae9048c4bc",
+                  "effective-type": "type/Text"
+                },
+                7
+              ],
+              [
+                "field",
+                {
+                  "base-type": "type/Text",
+                  "join-alias": "People - User",
+                  "lib/uuid": "43b2c518-dd68-49b1-a8b2-71e0fbc2d70b",
+                  "effective-type": "type/Text"
+                },
+                1
+              ]
+            ],
+            "strategy": "left-join",
+            "conditions": [
+              [
+                "=",
+                {
+                  "lib/uuid": "7f1cddca-cda2-430f-afc6-22aae9341b64"
+                },
+                [
+                  "field",
+                  {
+                    "base-type": "type/Integer",
+                    "lib/uuid": "bb9c7d2f-01c3-4c86-b0f5-cf86b8316d38",
+                    "effective-type": "type/Integer"
+                  },
+                  11
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/BigInteger",
+                    "join-alias": "People - User",
+                    "lib/uuid": "cc37e54d-c5ce-4be0-bcfb-548f79e6f88f",
+                    "effective-type": "type/BigInteger"
+                  },
+                  4
+                ]
+              ]
+            ],
+            "lib/type": "mbql/join",
+            "stages": [
+              {
+                "lib/type": "mbql.stage/mbql",
+                "source-table": 1
+              }
+            ]
+          }
+        ],
+        "expressions": [
+          [
+            "datetime-diff",
+            {
+              "lib/uuid": "94b4c11a-697e-4cc4-baec-efbcee04a20c",
+              "lib/expression-name": "Age"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Date",
+                "join-alias": "People - User",
+                "lib/uuid": "332cf88f-85b8-46e6-841b-ab2c6be45d9e",
+                "effective-type": "type/Date"
+              },
+              12
+            ],
+            [
+              "now",
+              {
+                "lib/uuid": "926bd13f-f3a0-4ffa-b0e7-c4656e8b868a"
+              }
+            ],
+            "year"
+          ]
+        ],
+        "source-table": 2
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 1,
+  "legacy_query": "{\"database\":1,\"query\":{\"expressions\":{\"Age\":[\"datetime-diff\",[\"field\",12,{\"base-type\":\"type/Date\",\"join-alias\":\"People - User\"}],[\"now\"],\"year\"]},\"joins\":[{\"alias\":\"People - User\",\"condition\":[\"=\",[\"field\",11,{\"base-type\":\"type/Integer\"}],[\"field\",4,{\"base-type\":\"type/BigInteger\",\"join-alias\":\"People - User\"}]],\"fields\":[[\"field\",7,{\"base-type\":\"type/Text\",\"join-alias\":\"People - User\"}],[\"field\",1,{\"base-type\":\"type/Text\",\"join-alias\":\"People - User\"}]],\"source-table\":1,\"strategy\":\"left-join\"}],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "table",
+  "archived_directly": false,
+  "entity_id": "_GiVL6zYmsnBb1oqLCp4u",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "table.cell_column": "SUBTOTAL",
+    "table.columns": [
+      {
+        "enabled": true,
+        "name": "ID"
+      },
+      {
+        "enabled": true,
+        "name": "USER_ID"
+      },
+      {
+        "enabled": true,
+        "name": "PRODUCT_ID"
+      },
+      {
+        "enabled": true,
+        "name": "SUBTOTAL"
+      },
+      {
+        "enabled": true,
+        "name": "TAX"
+      },
+      {
+        "enabled": true,
+        "name": "TOTAL"
+      },
+      {
+        "enabled": true,
+        "name": "DISCOUNT"
+      },
+      {
+        "enabled": true,
+        "name": "CREATED_AT"
+      },
+      {
+        "enabled": true,
+        "name": "QUANTITY"
+      },
+      {
+        "enabled": true,
+        "name": "EMAIL"
+      },
+      {
+        "enabled": true,
+        "name": "Age"
+      },
+      {
+        "enabled": true,
+        "name": "STATE"
+      }
+    ],
+    "table.pivot_column": "SOURCE"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

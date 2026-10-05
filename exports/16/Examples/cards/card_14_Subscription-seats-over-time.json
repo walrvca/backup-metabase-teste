@@ -1,0 +1,190 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Number of seats in an average subscription, showing increase and decrease",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 6,
+  "result_metadata": [
+    {
+      "description": null,
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "unit": "year",
+      "name": "CREATED_AT",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        31,
+        {
+          "base-type": "type/DateTime",
+          "original-temporal-unit": "month"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 31,
+      "visibility_type": "normal",
+      "display_name": "Created At: Year",
+      "base_type": "type/DateTime"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Sum of Seats",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "field",
+        "sum",
+        {
+          "base-type": "type/Integer"
+        }
+      ],
+      "name": "sum",
+      "semantic_type": null
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Subscription seats over time",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "temporal-unit": "year",
+              "base-type": "type/DateTime",
+              "original-temporal-unit": "month",
+              "lib/uuid": "314a6494-6c71-44a5-a89e-3f51312fbc57",
+              "effective-type": "type/DateTime"
+            },
+            31
+          ]
+        ],
+        "aggregation": [
+          [
+            "sum",
+            {
+              "lib/uuid": "519610c9-2ad9-43a5-a506-3e7b278f5a87"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Integer",
+                "lib/uuid": "a80ab2a8-2275-49f6-952e-8c569a1288c8",
+                "effective-type": "type/Integer"
+              },
+              33
+            ]
+          ]
+        ],
+        "source-table": 6
+      },
+      {
+        "lib/type": "mbql.stage/mbql",
+        "filters": [
+          [
+            "time-interval",
+            {
+              "include-current": true,
+              "lib/uuid": "95d7498f-eb3e-4d6d-bc05-e99f590abda6"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "inherited-temporal-unit": "year",
+                "lib/uuid": "accdb55b-f50d-47f6-8935-761ed0bed652"
+              },
+              "CREATED_AT"
+            ],
+            -3,
+            "year"
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 14,
+  "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"time-interval\",[\"field\",\"CREATED_AT\",{\"base-type\":\"type/DateTime\",\"inherited-temporal-unit\":\"year\"}],-3,\"year\",{\"include-current\":true}],\"source-query\":{\"aggregation\":[[\"sum\",[\"field\",33,{\"base-type\":\"type/Integer\"}]]],\"breakout\":[[\"field\",31,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"year\",\"original-temporal-unit\":\"month\"}]],\"source-table\":6}},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "waterfall",
+  "archived_directly": false,
+  "entity_id": "C8V7Dszig-vuqn9TP0igc",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.dimensions": [
+      "CREATED_AT"
+    ],
+    "graph.show_values": true,
+    "graph.x_axis.title_text": "",
+    "graph.y_axis.title_text": "",
+    "graph.metrics": [
+      "sum"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

@@ -1,0 +1,193 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Compares the total number of orders placed for this product this month with the previous period",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "result_metadata": [
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "unit": "month",
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        13,
+        {
+          "base-type": "type/DateTime",
+          "temporal-unit": "month"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Created At: Month",
+      "base_type": "type/DateTime"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Sum of Quantity",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "sum",
+      "semantic_type": "type/Quantity",
+      "settings": {
+        "show_mini_bar": false
+      }
+    }
+  ],
+  "embedding_type": null,
+  "creator": {
+    "id": 13371338,
+    "first_name": "Metabase",
+    "last_name": "Internal",
+    "email": "internal@metabase.com",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Enormous Wool Car trend",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "public_uuid_prefix": null,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2025-10-03T12:30:24.650407Z",
+  "dashboard": null,
+  "type": "question",
+  "dimensions": null,
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-10-03T12:30:24.650407Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "sum",
+            {
+              "lib/uuid": "c474309d-a5a7-40f4-90d7-7a83fdcca474"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Integer",
+                "lib/uuid": "086814f8-58e6-484e-957d-d284b248283c",
+                "effective-type": "type/Integer"
+              },
+              2
+            ]
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "month",
+              "lib/uuid": "2085c911-a1bb-4ef7-a98d-39c24c09cd48",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "between",
+            {
+              "lib/uuid": "a79974b9-c124-458a-a8b3-02fc01a4b650"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "dfcea43f-3006-4884-85e7-06d58284f9df",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            "2021-01-01",
+            "2024-01-23"
+          ],
+          [
+            "=",
+            {
+              "lib/uuid": "89f1d1ca-81e8-454a-a9df-7f51cbe8b6c7"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Integer",
+                "lib/uuid": "f34b7aa6-c945-4dc2-a02a-b844f2319135",
+                "effective-type": "type/Integer"
+              },
+              14
+            ],
+            17
+          ]
+        ]
+      }
+    ],
+    "database": 1
+  },
+  "dimension_mappings": null,
+  "id": 29,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"sum\",[\"field\",2,{\"base-type\":\"type/Integer\"}]]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"month\"}]],\"filter\":[\"and\",[\"between\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],\"2021-01-01\",\"2024-01-23\"],[\"=\",[\"field\",14,{\"base-type\":\"type/Integer\"}],17]],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "smartscalar",
+  "archived_directly": false,
+  "entity_id": "HSVx57QxslVTGbo1_XS4G",
+  "param_fields": {},
+  "collection_preview": true,
+  "visualization_settings": {},
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-10-03T12:30:24.650407Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2025-10-03T12:30:24.650407Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}
